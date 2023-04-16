@@ -1,0 +1,90 @@
+.ppt_basic {
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
+
+.ppt-main-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 主页 */
+.author-info {
+    font-size: 25px;
+    font-weight: 590;
+    font-family: 楷体, serif;
+}
+
+.logo-div {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 35%;
+}
+
+.logo-name {
+    font-size: 25px;
+    font-family: 楷体, serif;
+}
+
+.logo-img {
+    width: 40%;
+}
+
+/* 标题格式 */
+.first_header {
+    letter-spacing: 5px;
+    font-size:60px;
+    font-family: Lato, SimHei, sans-serif;
+    font-weight: 650;
+}
+
+.second_header {
+    font-size: 48px;
+    font-family: Lato sans-serif;
+    font-weight: bold;
+    margin: 0 0 20px;
+    padding: 0 25px 5px;
+    border-bottom: 2px solid skyblue;
+    text-align: left;
+}
+
+.third_header {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Lato, serif;
+    text-align: left;
+    margin: 20px 0;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.main_text {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Lato, serif;
+    float: left;
+    line-height: 44px;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.ui_content {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Lato, SimHei, serif;
+    line-height: 60px;
+    width: 90%;
+}
+
+.result_table {
+    font-size: 25px;
+    font-weight: 600;
+}
