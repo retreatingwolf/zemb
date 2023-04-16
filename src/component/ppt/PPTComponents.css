@@ -1,0 +1,29 @@
+
+
+/* 标题格式 */
+.first_header {
+    letter-spacing: 5px;
+    font-size:60px;
+    font-family: Lato, SimHei, sans-serif;
+    font-weight: 650;
+}
+
+.second_header {
+    font-size: 48px;
+    letter-spacing: 3px;
+    font-family: Lato, sans-serif;
+    font-weight: 600;
+    padding: 0 25px 5px;
+    border-bottom: 2px solid skyblue;
+    text-align: left;
+}
+
+.third_header {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Lato, SimHei, serif;
+    text-align: left;
+    padding: 0 25px;
+}
+
+
