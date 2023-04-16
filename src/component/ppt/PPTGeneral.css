@@ -1,0 +1,72 @@
+.ppt_basic {
+    /*border: 1px solid #ccc;*/
+    /*border-radius:5px;*/
+}
+
+.ppt-main-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 主页 */
+.author-info {
+    font-size: 25px;
+    font-weight: 590;
+    font-family: 楷体, serif;
+}
+
+.logo-div {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 35%;
+}
+
+.logo-name {
+    font-size: 25px;
+    font-family: 楷体, serif;
+}
+
+.logo-img {
+    width: 40%;
+}
+
+.main_text {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Lato, serif;
+    float: left;
+    line-height: 44px;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.ui_content {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Lato, SimHei, serif;
+    line-height: 60px;
+    width: 90%;
+}
+
+.result_table {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.division_table {
+    font-size: 25px;
+    font-family: Lato, SimHei, sans-serif;
+    font-weight: 500;
+}
+
+.detail-slide {
+    margin-top: -30px;
+}

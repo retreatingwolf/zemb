@@ -1,5 +1,5 @@
 import React from "react";
-import "./pptgeneral.css"
+import "./PPTComponents.css"
 
 const FirstHeader = ({text}) => {
     return (

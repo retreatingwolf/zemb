@@ -3,7 +3,7 @@ import Reveal from 'reveal.js';
 
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/white.css';
-import "./pptgeneral.css"
+import "./PPTGeneral.css"
 import { Table } from '@douyinfe/semi-ui';
 import {FirstHeader, SecondHeader, ThirdHeader, ThirdHeaderLink} from "./PPTComponents";
 
