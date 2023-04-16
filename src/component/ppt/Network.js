@@ -5,7 +5,7 @@ import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/white.css';
 import "./PPTGeneral.css"
 import { Table } from '@douyinfe/semi-ui';
-import {FirstHeader, SecondHeader, ThirdHeader, ThirdHeaderLink} from "./PPTComponents";
+import {FirstHeader, MainSlide, SecondHeader, ThirdHeader, ThirdHeaderLink} from "./PPTComponents";
 
 const Network = () => {
     React.useEffect(() => {
@@ -14,7 +14,7 @@ const Network = () => {
             transition: 'slide'
         })
         deck.initialize();
-        console.log('initialized Network Presentation')
+        console.log('初始化网工ppt')
     },[])
 
     // 结果表格数据
@@ -85,36 +85,21 @@ const Network = () => {
         }
     ]
 
+    const author_info = [
+        {key: '1', stuid: "200855528", name: "周航"},
+        {key: '2', stuid: "200865104", name: "程有为"},
+        {key: '3', stuid: "200855507", name: "花宇杰"},
+    ]
+
     return (
         <div className="reveal">
             <div className="slides" data-transition="slide">
                 <section>
                     {/*1-1 : 作者信息，主页 */}
-                    <section className="ppt-main-layout">
-                        <FirstHeader text="网络工程实习报告"/><br/>
-                        <div className="author-info">
-                            <a href="https://gitee.com/zhouzhoukang">200855528 周航</a><br/>
-                            200865104程有为<br/>
-                            200855507花宇杰<br/>
-                        </div>
-                        <div className="logo-div">
-                            <div className="logo">
-                                <a href="https://www.njfu.edu.cn/">
-                                    <p className="logo-name">南京林业大学</p>
-                                    <img className="logo-img" src="/resources/img/network/main_icon.jpg"
-                                         alt="南京林业大学"/>
-                                </a>
-                            </div>
-
-                            <div className="logo">
-                                <a href="https://it.njfu.edu.cn/">
-                                    <p className="logo-name">信息科学技术学院</p>
-                                    <img className="logo-img" src="/resources/img/network/cs_logo.jpg"
-                                         alt="信息科学技术学院"/>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
+                    <MainSlide
+                        title="网络工程实习报告"
+                        authors={author_info}
+                    />
 
                     {/* 1-2 综述概览 */}
                     <section className="detail-slide">
