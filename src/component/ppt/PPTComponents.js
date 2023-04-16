@@ -33,7 +33,7 @@ const MainSlide = ({title, authors}) => {
             <FirstHeader text={title}/><br/>
             <div className="author-info">
                 {authors.map((stu) => {
-                    console.log(stu.key)
+                    // console.log(stu.key)
                     return (
                         <p key={stu.key}>{stu.stuid}{stu.name}</p>
                     )

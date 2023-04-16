@@ -3,6 +3,7 @@ import Reveal from 'reveal.js';
 
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/white.css';
+// import 'reveal.js/dist/theme/black.css';
 import "./PPTGeneral.css"
 import { Table } from '@douyinfe/semi-ui';
 import {FirstHeader, MainSlide, SecondHeader, ThirdHeader, ThirdHeaderLink} from "./PPTComponents";
@@ -10,7 +11,7 @@ import {FirstHeader, MainSlide, SecondHeader, ThirdHeader, ThirdHeaderLink} from
 const Network = () => {
     React.useEffect(() => {
         let deck = new Reveal({
-            backgroundTransition: 'slide',
+            backgroundTransition: 'zoom',
             transition: 'slide'
         })
         deck.initialize();
@@ -66,7 +67,6 @@ const Network = () => {
         {title: '姓名', dataIndex: 'name'},
         {title: '分工', dataIndex: 'division'}
     ]
-
     const division_table_data = [
         {
             stuid: '200855528',

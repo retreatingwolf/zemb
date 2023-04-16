@@ -6,7 +6,7 @@ import {
     IconCamera,
     IconCloud,
     IconDesktop,
-    IconHome,
+    IconHome, IconSetting,
     IconUserCardVideo,
     IconWifi
 } from '@douyinfe/semi-icons';
@@ -15,7 +15,8 @@ import {Route, Routes} from "react-router-dom";
 import Network from "./component/ppt/Network";
 import RPiPPT from "./component/ppt/RPiPPT";
 import Home from "./component/Home";
-import RPi from "./component/RPi";
+import RPi from "./component/RPi/RPi";
+import Setting from "./component/Setting/Setting";
 const { Footer, Sider, Content } = Layout;
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
                       <Route path="/rpi" element={<RPi />}/>
                       <Route path="/network" element={<Network />}/>
                       <Route path="/rpippt" element={<RPiPPT />}/>
-                      {/*<Route  path="/ppt" element={<Home />} />*/}
+                      <Route  path="/setting" element={<Setting />} />
                       <Route exact path="/" element={<Home />} />
                   </Routes>
               </Content>
@@ -42,6 +43,7 @@ function App() {
                               Rpi: "/rpi",
                               Network: "/network",
                               Rpippt: "/rpippt",
+                              Setting: "/setting"
                           };
                           // console.log(itemElement)
 
@@ -56,13 +58,15 @@ function App() {
                           );
                       }}
                   >
-                      <Nav.Header className="main-nav-header" logo={<IconBranch style={{ height: '36px', fontSize: 36 }}/>} >CaZ Swing</Nav.Header>
+                      <Nav.Header className="main-nav-header" logo={<IconBranch style={{ height: '36px', fontSize: 36 }}/>} text="CaZ Swing"/>
                       <Nav.Item itemKey='Home' text='Home' icon={ <IconHome/> } />
                       <Nav.Item itemKey='Rpi' text='Raspberry Pi' icon={<IconUserCardVideo/>}/>
+
                       <Nav.Sub itemKey='Ppt' text='Presentation' icon={<IconDesktop />}>
                           <Nav.Item itemKey='Network' text='Network' icon={<IconCloud />}/>
                           <Nav.Item itemKey='Rpippt' text='RPi' icon={<IconCamera />}/>
                       </Nav.Sub>
+                      <Nav.Item itemKey='Setting' text='Setting' icon={<IconSetting/>}/>
 
                       <Nav.Footer collapseButton={true} />
                   </Nav>
