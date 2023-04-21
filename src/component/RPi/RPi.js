@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 class RPi extends Component {
     componentDidMount(){
-        this.init()
+        // this.init()
         // this.animate()
     }
 
@@ -65,6 +65,7 @@ class RPi extends Component {
     render() {
         return (
             <div id="stage" style={{height: '90%'}}>
+
             </div>
         )
     }

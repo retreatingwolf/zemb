@@ -35,7 +35,7 @@ const MainSlide = ({title, authors}) => {
                 {authors.map((stu) => {
                     // console.log(stu.key)
                     return (
-                        <p key={stu.key}>{stu.stuid}{stu.name}</p>
+                        <div key={stu.key} style={{marginBottom: '7px'}}>{stu.stuid}{stu.name}</div>
                     )
                 })}
             </div>

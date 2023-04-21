@@ -28,7 +28,7 @@ function App() {
                       <Route path="/rpi" element={<RPi />}/>
                       <Route path="/network" element={<Network />}/>
                       <Route path="/rpippt" element={<RPiPPT />}/>
-                      <Route  path="/setting" element={<Setting />} />
+                      <Route path="/setting" element={<Setting />} />
                       <Route exact path="/" element={<Home />} />
                   </Routes>
               </Content>
