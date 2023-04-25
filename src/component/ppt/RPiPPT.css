@@ -1,0 +1,18 @@
+.video-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.video-frame {
+    width: 350px;
+}
+
+.timeline-table {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Times New Roman", sans-serif;
+}
+

@@ -1,14 +1,14 @@
 /* 标题格式 */
 .first_header {
-    letter-spacing: 5px;
+    /*letter-spacing: 2px;*/
     font-size:60px;
-    font-family: Lato, SimHei, sans-serif;
+    font-family: "Times New Roman", Lato, SimHei, sans-serif;
     font-weight: 650;
 }
 
 .second_header {
     font-size: 48px;
-    letter-spacing: 3px;
+    /*letter-spacing: 2px;*/
     font-family: Lato, sans-serif;
     font-weight: 600;
     padding: 0 25px 5px;
@@ -31,10 +31,20 @@
     align-items: center;
 }
 
-.author-info {
+.authors-info {
     font-size: 25px;
     font-weight: 590;
-    font-family: 楷体, serif;
+    font-family: "Times New Roman", 楷体, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.author-info {
+    margin-bottom: 7px;
+    text-align: left;
+    margin-left: 25vw;
 }
 
 .logo-div {
@@ -51,7 +61,7 @@
 
 .logo-name {
     font-size: 25px;
-    font-family: 楷体, serif;
+    font-family: "Times New Roman", 楷体, serif;
 }
 
 .logo-img {

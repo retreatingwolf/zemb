@@ -31,11 +31,11 @@ const MainSlide = ({title, authors}) => {
     return (
         <section className="ppt-main-layout">
             <FirstHeader text={title}/><br/>
-            <div className="author-info">
+            <div className="authors-info">
                 {authors.map((stu) => {
                     // console.log(stu.key)
                     return (
-                        <div key={stu.key} style={{marginBottom: '7px'}}>{stu.stuid}{stu.name}</div>
+                        <div key={stu.key} className="author-info">{stu.stuid}{stu.name}</div>
                     )
                 })}
             </div>
@@ -43,7 +43,7 @@ const MainSlide = ({title, authors}) => {
             <div className="logo-div">
                 <div className="logo">
                     <a href="https://www.njfu.edu.cn/">
-                        <p className="logo-name">南京林业大学</p>
+                        <p className="logo-name">Nanjing Forestry University</p>
                         <img className="logo-img" src="/resources/img/network/main_icon.jpg"
                              alt="南京林业大学"/>
                     </a>
@@ -51,7 +51,7 @@ const MainSlide = ({title, authors}) => {
 
                 <div className="logo">
                     <a href="https://it.njfu.edu.cn/">
-                        <p className="logo-name">信息科学技术学院</p>
+                        <p className="logo-name">Information Science and Technology School</p>
                         <img className="logo-img" src="/resources/img/network/cs_logo.jpg"
                              alt="信息科学技术学院"/>
                     </a>
