@@ -1,1 +1,46 @@
+name: Build and Deploy zfullw
+on:
+  push:
+    branches:
+      - master
 
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          MY_VAR: Hi there! My name is
+          FIRST_NAME: Zhou
+          MIDDLE_NAME: Zhou
+          LAST_NAME: Kang
+        run: |
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+
+
+#  build:
+#    # 运行环境
+#    runs-on: ubuntu-latest
+#    # 步骤
+#    steps:
+#      # 使用别人的action
+#      - uses: actions/checkout@v2
+#      - name: npm install
+#        run: npm install
+#      - name: npm run build
+#        run: react-scripts build
+#      # 命名这个任务为发布Deploy
+#      - name: Deploy
+#        # 因为构建之后，需要把代码上传到服务器上，所以需要连接到ssh，并且做一个拷贝操作
+#        uses: cross-the-world/scp-pipeline@master
+#        env:
+#          WELCOME: "ssh scp ssh pipelines"
+#          LASTSSH: "Doing something after copying"
+#        with:
+#          host: ${{ secrets.USER_HOST }}
+#          user: ${{ secrets.USER_NAME }}
+#          pass: ${{ secrets.USER_PASS }}
+#          connect_timeout: 10s
+#          local: './dist/*'
+#          remote: /home/www/dist
