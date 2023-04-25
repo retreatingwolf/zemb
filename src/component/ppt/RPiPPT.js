@@ -18,7 +18,7 @@ const RPiPPT = () => {
 
     const author_info = [
         {key: '1', stuid: "200855528", name: " H.Zhou   "},
-        {key: '2', stuid: "200855521", name: " Catherine"},
+        {key: '2', stuid: "200855521", name: " X.Xiang"},
         {key: '3', stuid: "200855501", name: " D.J.Chen "},
         {key: '4', stuid: "185080504", name: " J.N.Dong "},
         {key: '5', stuid: "200855406", name: " X.W.Gu   "},
