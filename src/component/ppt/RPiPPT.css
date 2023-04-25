@@ -12,7 +12,11 @@
 
 .timeline-table {
     font-size: 25px;
-    font-weight: 600;
-    font-family: "Times New Roman", sans-serif;
+    font-weight: 500;
+    font-family: sans-serif, "Times New Roman", sans-serif;
+}
+
+.zslides {
+    margin-top: 0;
 }
 

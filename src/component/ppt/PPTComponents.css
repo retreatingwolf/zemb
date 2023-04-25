@@ -2,14 +2,14 @@
 .first_header {
     /*letter-spacing: 2px;*/
     font-size:60px;
-    font-family: "Times New Roman", Lato, SimHei, sans-serif;
-    font-weight: 650;
+    font-family: sans-serif, "Times New Roman", Lato, SimHei, sans-serif;
+    font-weight: 600;
 }
 
 .second_header {
     font-size: 48px;
     /*letter-spacing: 2px;*/
-    font-family: Lato, sans-serif;
+    font-family: sans-serif, "Times New Roman", Lato, sans-serif;
     font-weight: 600;
     padding: 0 25px 5px;
     border-bottom: 2px solid skyblue;
@@ -19,7 +19,7 @@
 .third_header {
     font-size: 32px;
     font-weight: 500;
-    font-family: "Times New Roman", Lato, SimHei, serif;
+    font-family: sans-serif, "Times New Roman", Lato, SimHei, serif;
     text-align: left;
     padding: 0 25px;
 }
@@ -29,6 +29,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .authors-info {

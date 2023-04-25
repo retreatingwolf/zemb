@@ -10,10 +10,11 @@ const RPiPPT = () => {
     React.useEffect(() => {
         let deck = new Reveal({
             backgroundTransition: 'zoom',
-            transition: 'slide'
+            transition: 'slide',
+            autoPlayMedia: true,
+            margin: 0,
         })
         deck.initialize();
-        console.log('初始化网工ppt')
     },[])
 
     const author_info = [
@@ -36,25 +37,37 @@ const RPiPPT = () => {
         },
         {
             time_id: '4-28',
-            tasks: 'Opening Report',
+            tasks: 'Opening Proposal',
         },
         {
-            time_id: '4-29 ~ 5-1',
+            time_id: '4-29 ~ 5-5',
             tasks: 'Software Development',
         },
         {
-            time_id: '5-1 ~ 5-5',
+            time_id: '5-5 ~ 5-10',
             tasks: 'Hardware Development',
+        },
+        {
+            time_id: '5-10 ~ 5-15',
+            tasks: 'Joint Debugging and Test',
+        },
+        {
+            time_id: '5-15 ~ 5-20',
+            tasks: 'Document writing',
+        },
+        {
+            time_id: '5-23',
+            tasks: 'Defense',
         },
     ]
 
     return (
         <div className="reveal">
-            <div className="slides" data-transition="slide">
+            <div className="slides zslides"  data-transition="slide">
                 <section>
                     {/*1-1 : 作者信息，主页 */}
                     <MainSlide
-                        title="Opening Report"
+                        title="Opening Proposal"
                         authors={author_info}
                     />
 
@@ -63,6 +76,12 @@ const RPiPPT = () => {
                         <SecondHeader text="Overview"/>
                         <ThirdHeader text="Target"/>
                         <ThirdHeader text="Methods"/>
+                        <ul className="ui_content">
+                            <li className="li_content">Hardware Design</li>
+                            <li className="li_content">Core Technology</li>
+                            <li className="li_content">Internet of Things</li>
+
+                        </ul>
                         <ThirdHeader text="Timeline"/>
                         <ThirdHeader text="Risk and Countermeasure"/>
                     </section>
@@ -79,7 +98,8 @@ const RPiPPT = () => {
                         <SecondHeader text="Target"/>
                         <ThirdHeader text="Make an Electronic Keyboard"/>
                         <ThirdHeader text="With a Raspberry Pi"/>
-                        <ThirdHeader text="Sounds EASY?"/>
+                        {/*<ThirdHeader text="Sounds EASY?"/>*/}
+                        <img className="fragment" src="/resources/rpi/framework.png" alt="Function Framework" style={{width: '850px'}}/>
                     </section>
                 </section>
 
@@ -119,10 +139,10 @@ const RPiPPT = () => {
                         <SecondHeader text="How?"/>
                         <ThirdHeader text="Genarate realtime-waveform"/>
                         <div className="video-group">
-                            <video className="video-frame" src="/resources/rpi/gs_110.mp4" muted autoPlay loop="loop"/>
-                            <video className="video-frame" src="/resources/rpi/gs_220.mp4" muted autoPlay loop="loop"/>
-                            <video className="video-frame" src="/resources/rpi/gs_440.mp4" muted autoPlay loop="loop"/>
-                            <video className="video-frame" src="/resources/rpi/gs_880.mp4" muted autoPlay loop="loop"/>
+                            <video className="video-frame" src="/resources/rpi/gs_110.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/rpi/gs_220.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/rpi/gs_440.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/rpi/gs_880.mp4" data-autoplay loop="loop"/>
                         </div>
                     </section>
 
@@ -131,8 +151,8 @@ const RPiPPT = () => {
                         <ThirdHeader text="We also want to connect it to Internet!"/>
                         <ul className="ui_content">
                             <li className="li_content">Record your works and upload them to the cloud and acquire them with a web browser.</li>
-                            <li className="li_content">Back-end Development -- Maybe Node.js</li>
-                            <li className="li_content">Front-end Development -- Maybe React</li>
+                            <li className="li_content">Back-end Development -- Node.js</li>
+                            <li className="li_content">Front-end Development -- React.js</li>
                         </ul>
                     </section>
                 </section>
@@ -141,12 +161,10 @@ const RPiPPT = () => {
                     {/*4-1 : 时间线*/}
                     <section>
                         <FirstHeader text="Timeline" />
-
                     </section>
 
                     <section>
                         <SecondHeader text="Timeline Table"/>
-                        <br/>
                         <Table
                             className="timeline-table"
                             columns={timeline_table_column}
@@ -179,6 +197,10 @@ const RPiPPT = () => {
                             <li className="li_content">There is no end to beautifying the interface</li>
                             <li className="li_content">Debug ∞ times</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <FirstHeader text="End."/>
                     </section>
                 </section>
             </div>
