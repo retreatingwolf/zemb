@@ -1,6 +1,6 @@
 import "./App.css"
 import {Layout, Nav} from "@douyinfe/semi-ui";
-import {IconRPi, IconZ} from "./component/icons/Icons";
+// import {IconRPi, IconZ} from "./component/icons/Icons";
 import {
     IconBranch,
     IconCamera,
@@ -8,7 +8,6 @@ import {
     IconDesktop,
     IconHome, IconSetting,
     IconUserCardVideo,
-    IconWifi
 } from '@douyinfe/semi-icons';
 import {Link} from "react-router-dom";
 import {Route, Routes} from "react-router-dom";
@@ -17,7 +16,7 @@ import RPiPPT from "./component/ppt/RPiPPT";
 import Home from "./component/Home";
 import RPi from "./component/RPi/RPi";
 import Setting from "./component/Setting/Setting";
-const { Footer, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 function App() {
   return (

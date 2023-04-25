@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import React, { Component } from 'react'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 class RPi extends Component {
