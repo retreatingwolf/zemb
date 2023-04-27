@@ -18,16 +18,16 @@ const RPiPPT = () => {
     },[])
 
     const author_info = [
-        {key: '1', stuid: "200855528", name: " H.Zhou   "},
-        {key: '2', stuid: "200855521", name: " X.Xiang  "},
-        {key: '3', stuid: "200855501", name: " D.J.Chen "},
-        {key: '4', stuid: "185080504", name: " J.N.Dong "},
-        {key: '5', stuid: "200855406", name: " X.W.Gu   "},
+        {key: '1', stuid: "200855528", name: " Hang Zhou   "},
+        {key: '2', stuid: "200855521", name: " Xiang Xiao  "},
+        {key: '3', stuid: "200855501", name: " Dong Jin Chen "},
+        {key: '4', stuid: "185080504", name: " Jiang Nan Dong "},
+        {key: '5', stuid: "200855406", name: " Xiao Wen Gu   "}
     ]
 
     const timeline_table_column = [
-        {title: '时间', dataIndex: 'time_id'},
-        {title: '任务', dataIndex: 'tasks'}
+        {title: 'Time Node', dataIndex: 'time_id'},
+        {title: 'Tasks', dataIndex: 'tasks'}
     ]
 
     const timeline_table_data = [
@@ -74,7 +74,7 @@ const RPiPPT = () => {
                     {/* 1-2 综述概览 */}
                     <section className="detail-slide">
                         <SecondHeader text="Overview"/>
-                        <ThirdHeader text="Target"/>
+                        <ThirdHeader text="Project Objective"/>
                         <ThirdHeader text="Methods"/>
                         <ul className="ui_content">
                             <li className="li_content">Hardware Design</li>
@@ -90,16 +90,16 @@ const RPiPPT = () => {
                 <section>
                     {/*2-1 : 目标*/}
                     <section>
-                        <FirstHeader text="Target" />
+                        <FirstHeader text="Project Objective" />
                     </section>
 
                     {/*2-2 : 最终目标*/}
                     <section>
-                        <SecondHeader text="Target"/>
+                        <SecondHeader text="Objective"/>
                         <ThirdHeader text="Make an Electronic Keyboard"/>
-                        <ThirdHeader text="With a Raspberry Pi"/>
+                        <ThirdHeader text="Based on Raspberry Pi"/>
                         {/*<ThirdHeader text="Sounds EASY?"/>*/}
-                        <img className="fragment" src="/resources/rpi/framework.png" alt="Function Framework" style={{width: '850px'}}/>
+                        <img className="fragment" src="/resources/img/rpi/framework.png" alt="Function Framework" style={{width: '850px'}}/>
                     </section>
                 </section>
 
@@ -113,7 +113,7 @@ const RPiPPT = () => {
                         <SecondHeader text="Hardware"/>
                         <ThirdHeader text="Overview Graph"/>
                         <ul className="ui_content">
-                            <li className="li_content">Keyboard -- 4×4 Matrix Button</li>
+                            <li className="li_content">Keyboard -- 4×4 Button Matrix</li>
                             <li className="li_content">Sound Output -- Sound</li>
                             <li className="li_content">Voice Input -- USB Microphone</li>
                             <li className="li_content">Visualization -- 0.96 OLED</li>
@@ -137,18 +137,18 @@ const RPiPPT = () => {
 
                     <section>
                         <SecondHeader text="How?"/>
-                        <ThirdHeader text="Genarate realtime-waveform"/>
+                        <ThirdHeader text="Generate real-time waveform"/>
                         <div className="video-group">
-                            <video className="video-frame" src="/resources/rpi/gs_110.mp4" data-autoplay loop="loop"/>
-                            <video className="video-frame" src="/resources/rpi/gs_220.mp4" data-autoplay loop="loop"/>
-                            <video className="video-frame" src="/resources/rpi/gs_440.mp4" data-autoplay loop="loop"/>
-                            <video className="video-frame" src="/resources/rpi/gs_880.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/img/rpi/gs_110.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/img/rpi/gs_220.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/img/rpi/gs_440.mp4" data-autoplay loop="loop"/>
+                            <video className="video-frame" src="/resources/img/rpi/gs_880.mp4" data-autoplay loop="loop"/>
                         </div>
                     </section>
 
                     <section>
                         <SecondHeader text="Internet of Things"/>
-                        <ThirdHeader text="We also want to connect it to Internet!"/>
+                        <ThirdHeader text="We also want to connect it to the Internet!"/>
                         <ul className="ui_content">
                             <li className="li_content">Record your works and upload them to the cloud and acquire them with a web browser.</li>
                             <li className="li_content">Back-end Development -- Node.js</li>
