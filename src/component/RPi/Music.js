@@ -1,6 +1,6 @@
-
 import React from 'react';
 import ReactAplayer from "react-aplayer"
+
 const Music = ({audio}) => {
     const onPlay = () => {
         console.log('on play');

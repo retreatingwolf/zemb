@@ -1,11 +1,9 @@
 import React from 'react'
-import {Button, Table} from '@douyinfe/semi-ui';
-import {IconPlay} from "@douyinfe/semi-icons";
 import "./RPi.css"
 import Music from "./Music";
 
 const RPi = () => {
-    const [audio, setAudio] = React.useState([
+    const audio = [
         {
             name: 'twice.mp3',
             artist: 'Yourself',
@@ -16,7 +14,7 @@ const RPi = () => {
             artist: 'Yourself',
             url: "/resources/audios/刘耀文.mp3"
         }
-    ])
+    ]
 
     // const data = [
     //     {
