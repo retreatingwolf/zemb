@@ -1,6 +1,5 @@
 import "./App.css"
 import {Layout, Nav} from "@douyinfe/semi-ui";
-// import {IconRPi, IconZ} from "./component/icons/Icons";
 import {
     IconBranch,
     IconCamera,

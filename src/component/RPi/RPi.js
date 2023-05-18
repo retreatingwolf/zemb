@@ -1,77 +1,62 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from "axios";
+import {Button, Table} from "@douyinfe/semi-ui";
+import {IconPlay} from "@douyinfe/semi-icons";
+import ZAplayer from "./ZAplayer";
 import "./RPi.css"
-import Music from "./Music";
 
 const RPi = () => {
-    const audio = [
-        {
-            name: 'twice.mp3',
+    const [audioList, setAudioList] = useState([])
+    const [audio, setAudio] = useState([{
+        url: ''
+    }])
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/audios')
+            .then(response => {
+                // console.log(typeof (response.data))
+                // console.log(response.data)
+                setAudioList(response.data)
+            })
+    }, [])
+
+    const click_play = (record) => {
+        // console.log(record.name)
+        // console.log(record.url)
+        const new_audio = {
+            name: record.name,
             artist: 'Yourself',
-            url: '/resources/audios/twice.mp3'
+            url: record.url
+        }
+        setAudio([].concat(new_audio))
+    }
+
+    const columns = [
+        {
+            title: 'Name',
+            dataIndex: 'name',
         },
         {
-            name: '刘耀文.mp3',
-            artist: 'Yourself',
-            url: "/resources/audios/刘耀文.mp3"
+            title: 'Artist',
+            dataIndex: 'artist',
+        },
+        {
+            title: 'Play',
+            dataIndex: 'play',
+            render: (text, record) => (
+                <Button icon={<IconPlay/>} theme="borderless" onClick={() => click_play(record)} />
+            ),
         }
-    ]
+    ];
 
-    // const data = [
-    //     {
-    //         key: '1',
-    //         name: 'twice.mp3',
-    //         size: '2M',
-    //         updateTime: '2023-01-12 05:13',
-    //         url: "/resources/audio/twice.mp3"
-    //     },
-    //     {
-    //         key: '2',
-    //         name: '刘耀文.mp3',
-    //         size: '2M',
-    //         updateTime: '2020-01-17 05:31',
-    //         url: "/resources/audio/刘耀文.mp3"
-    //     }
-    // ];
-
-    // const click_play = (record) => {
-    //     console.log(record.name)
-    //     console.log(record.url)
-    //     const new_audio = {
-    //         name: record.name,
-    //         artist: 'Yourself',
-    //         url: record.url
-    //     }
-    //     setAudio([].concat(new_audio))
-    // }
-
-    // const columns = [
-    //     {
-    //         title: 'Name',
-    //         dataIndex: 'name',
-    //     },
-    //     {
-    //         title: 'Size',
-    //         dataIndex: 'size',
-    //     },
-    //     {
-    //         title: 'Update Time',
-    //         dataIndex: 'updateTime',
-    //     },
-    //     {
-    //         title: 'Play',
-    //         dataIndex: 'play',
-    //         render: (text, record) => (
-    //             <Button icon={<IconPlay/>} theme="borderless" onClick={() => click_play(record)} />
-    //         ),
-    //     }
-    // ];
-
+    // console.log(audio)
     return (
         <>
             <h1>Your Personal Library</h1>
-            {/*<Table columns={columns} dataSource={data} pagination={false} />*/}
-            <Music audio={audio}/>
-            {/*<Button icon={<IconPlay/>} onClick={() => console.log(audio)}/>*/}
+            {/*显示音乐列表*/}
+            <Table columns={columns} dataSource={audioList} pagination={false} />
+            {/*播放音乐*/}
+            <ZAplayer audio={audio}/>
         </>
     )
 }
