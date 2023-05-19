@@ -1,5 +1,6 @@
 import {Button} from "@douyinfe/semi-ui";
 import {IconPause, IconPlay, IconStop} from "@douyinfe/semi-icons";
+import "./RPi.css"
 
 const ZAplayer = ({audio}) => {
     const audioTune = new Audio(audio[0].url);
@@ -20,9 +21,12 @@ const ZAplayer = ({audio}) => {
 
     return (
         <div className="zplayer-container">
-            <Button icon={<IconPlay/>} onClick={playSound}/>
-            <Button icon={<IconPause/>} onClick={pauseSound}/>
-            <Button icon={<IconStop/>} onClick={stopSound}/>
+            <p className="zplayer-name">Current: {audio[0].name}</p>
+            <div className="zplayer-buttons">
+                <Button icon={<IconPlay size="extra-large"/>} onClick={playSound}/>
+                <Button icon={<IconPause size="extra-large"/>} onClick={pauseSound}/>
+                <Button icon={<IconStop size="extra-large"/>} onClick={stopSound}/>
+            </div>
         </div>
     )
 }

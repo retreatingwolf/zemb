@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios";
 import {Button, Table} from "@douyinfe/semi-ui";
-import {IconPlay} from "@douyinfe/semi-icons";
+import {IconReply} from "@douyinfe/semi-icons";
 import ZAplayer from "./ZAplayer";
 import "./RPi.css"
+import { Typography } from '@douyinfe/semi-ui';
 
 const RPi = () => {
     const [audioList, setAudioList] = useState([])
@@ -41,23 +42,28 @@ const RPi = () => {
             dataIndex: 'artist',
         },
         {
-            title: 'Play',
-            dataIndex: 'play',
+            title: "Size",
+            dataIndex: 'size'
+        },
+        {
+            title: 'Choose',
+            dataIndex: 'choose',
             render: (text, record) => (
-                <Button icon={<IconPlay/>} theme="borderless" onClick={() => click_play(record)} />
+                <Button icon={<IconReply size="extra-large"/>} theme="borderless" onClick={() => click_play(record)} />
             ),
         }
     ];
-
     // console.log(audio)
+
+    const { Title } = Typography;
     return (
-        <>
-            <h1>Your Personal Library</h1>
+        <div className="music-player-container">
+            <Title className="music-player-title">Your Personal Library</Title>
             {/*显示音乐列表*/}
-            <Table columns={columns} dataSource={audioList} pagination={false} />
+            <Table className="music-player-table" columns={columns} dataSource={audioList} pagination={false} />
             {/*播放音乐*/}
             <ZAplayer audio={audio}/>
-        </>
+        </div>
     )
 }
 
