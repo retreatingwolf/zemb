@@ -4,7 +4,7 @@ import {
     IconBranch,
     IconCamera,
     IconCloud,
-    IconDesktop,
+    IconDesktop, IconGift,
     IconHome, IconSetting,
     IconUserCardVideo,
 } from '@douyinfe/semi-icons';
@@ -15,6 +15,7 @@ import RPiPPT from "./component/ppt/RPiPPT";
 import Home from "./component/Home";
 import RPi from "./component/RPi/RPi";
 import Setting from "./component/Setting/Setting";
+import RPiDefense from "./component/ppt/RPiDefense";
 const { Sider, Content } = Layout;
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                       <Route path="/rpi" element={<RPi />}/>
                       <Route path="/network" element={<Network />}/>
                       <Route path="/rpippt" element={<RPiPPT />}/>
+                      <Route path="/rpidefense" element={<RPiDefense/>}/>
                       <Route path="/setting" element={<Setting />} />
                       <Route exact path="/" element={<Home />} />
                   </Routes>
@@ -41,6 +43,7 @@ function App() {
                               Rpi: "/rpi",
                               Network: "/network",
                               Rpippt: "/rpippt",
+                              Rpidefense: "/rpidefense",
                               Setting: "/setting"
                           };
                           // console.log(itemElement)
@@ -63,6 +66,7 @@ function App() {
                       <Nav.Sub itemKey='Ppt' text='Presentation' icon={<IconDesktop />}>
                           <Nav.Item itemKey='Network' text='Network' icon={<IconCloud />}/>
                           <Nav.Item itemKey='Rpippt' text='RPi' icon={<IconCamera />}/>
+                          <Nav.Item itemKey='Rpidefense' text='RPiDefense' icon={<IconGift />}/>
                       </Nav.Sub>
                       <Nav.Item itemKey='Setting' text='Setting' icon={<IconSetting/>}/>
 

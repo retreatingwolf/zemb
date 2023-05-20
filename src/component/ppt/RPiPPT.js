@@ -12,17 +12,18 @@ const RPiPPT = () => {
             backgroundTransition: 'zoom',
             transition: 'slide',
             autoPlayMedia: true,
+            transitionSpeed: 'fast',
             margin: 0,
         })
         deck.initialize();
     },[])
 
     const author_info = [
-        {key: '1', stuid: "200855528", name: " Hang Zhou   "},
-        {key: '2', stuid: "200855521", name: " Xiang Xiao  "},
-        {key: '3', stuid: "200855501", name: " Dong Jin Chen "},
-        {key: '4', stuid: "185080504", name: " Jiang Nan Dong "},
-        {key: '5', stuid: "200855406", name: " Xiao Wen Gu   "}
+        {key: '1', stuid: "200855528", name: " Zhou Hang (周航)"},
+        {key: '2', stuid: "200855521", name: " Xiao Xiang (肖湘)"},
+        {key: '3', stuid: "200855501", name: " Chen Dongjin (陈东进)"},
+        {key: '4', stuid: "185080504", name: " Dong Jiangnan (董江南)"},
+        {key: '5', stuid: "200855406", name: " Gu Xiaowen (顾晓雯)"}
     ]
 
     const timeline_table_column = [
@@ -63,7 +64,7 @@ const RPiPPT = () => {
 
     return (
         <div className="reveal">
-            <div className="slides zslides"  data-transition="slide">
+            <div className="slides zslides" data-transition="slide">
                 <section>
                     {/*1-1 : 作者信息，主页 */}
                     <MainSlide

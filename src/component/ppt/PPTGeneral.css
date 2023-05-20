@@ -16,9 +16,13 @@
 .ui_content {
     font-size: 28px;
     font-weight: 500;
-    font-family: sans-serif, "Times New Roman", Lato, SimHei;
     line-height: 60px;
     width: 90%;
+}
+
+.li_content {
+    margin-bottom: -10px;
+    font-family: sans-serif, "Times New Roman", Lato, SimHei;
 }
 
 .result_table {
@@ -28,7 +32,7 @@
 
 .division_table {
     font-size: 25px;
-    font-family: sans-serif,Lato, SimHei;
+    font-family: "Times New Roman", sans-serif, Lato, SimHei;
     font-weight: 500;
 }
 

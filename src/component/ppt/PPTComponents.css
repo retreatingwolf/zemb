@@ -36,16 +36,14 @@
     font-size: 25px;
     font-weight: 590;
     font-family: "Times New Roman", 楷体, serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    display: inline-block;
+    /*border: solid red 2px;*/
 }
 
 .author-info {
     margin-bottom: 7px;
     text-align: left;
-    margin-left: 25vw;
+    /*margin-left: 25vw;*/
 }
 
 .logo-div {
