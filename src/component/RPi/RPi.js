@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import axios from "axios";
 import {Button, Table} from "@douyinfe/semi-ui";
-import {IconReply} from "@douyinfe/semi-icons";
+import {IconDelete, IconReply} from "@douyinfe/semi-icons";
 import ZAplayer from "./ZAplayer";
 import "./RPi.css"
 import { Typography } from '@douyinfe/semi-ui';
+import audioService from "./services/audioService";
 
 const RPi = () => {
     const [audioList, setAudioList] = useState([])
@@ -13,7 +13,7 @@ const RPi = () => {
     }])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/audios')
+        audioService.getAll()
             .then(response => {
                 // console.log(typeof (response.data))
                 // console.log(response.data)
@@ -21,7 +21,8 @@ const RPi = () => {
             })
     }, [])
 
-    const click_play = (record) => {
+    const choose_one_audio = (record) => {
+        // 选择一个音频在下面播放
         // console.log(record.name)
         // console.log(record.url)
         const new_audio = {
@@ -31,6 +32,11 @@ const RPi = () => {
         }
         setAudio([].concat(new_audio))
     }
+
+    const delete_one_audio = (record) => {
+        // 从服务器删除一个音频
+    }
+
 
     const columns = [
         {
@@ -49,8 +55,15 @@ const RPi = () => {
             title: 'Choose',
             dataIndex: 'choose',
             render: (text, record) => (
-                <Button icon={<IconReply size="extra-large"/>} theme="borderless" onClick={() => click_play(record)} />
+                <Button icon={<IconReply size="extra-large"/>} theme="borderless" onClick={() => choose_one_audio(record)} />
             ),
+        },
+        {
+            title: 'Delete',
+            dataIndex: 'delete',
+            render: (text, record) => (
+                <Button icon={<IconDelete size="extra-large"/>} theme="borderless" onClick={() => delete_one_audio(record)} />
+            )
         }
     ];
     // console.log(audio)
