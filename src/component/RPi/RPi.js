@@ -37,7 +37,6 @@ const RPi = () => {
         // 从服务器删除一个音频
     }
 
-
     const columns = [
         {
             title: 'Name',

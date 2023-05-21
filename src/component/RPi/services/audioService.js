@@ -1,5 +1,6 @@
 import axios from "axios";
 const baseUrl = 'http://47.100.107.53:10180/audio'
+// const baseUrl = 'http://localhost:10180/audio'
 
 const getAll = () => {
     return axios.get(`${baseUrl}/getAll`)
