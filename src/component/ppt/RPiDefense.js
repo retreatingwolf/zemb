@@ -318,23 +318,43 @@ const RPiDefense = () => {
                             style={{width: "950px"}}
                             alt="Chord"
                         />
-
                     </section>
                     <section>
                         <SecondHeader text="Timbres"/>
-                        <img src="/resources/img/rpiDefense/TimbreRealization.png" width="800" alt="Timbres"/>
+                        <img
+                            src="/resources/img/rpiDefense/TimbreRealization.png"
+                            style={{width: "800px", marginTop:"-15px", marginBottom:"0px"}}
+                            alt="Timbres"
+                        />
+                        <img
+                            className="fragment"
+                            src="/resources/img/rpiDefense/ClassInheritance.png"
+                            style={{width: "800px", marginTop:"-0px"}}
+                            alt="ClassInheritance"
+                        />
                     </section>
                     <section>
                         <SecondHeader text="Karplus-Strong"/>
-                        {/*TODO Karplus-Strong算法*/}
+                        <img
+                            src="/resources/img/rpiDefense/KarplusStrong.png"
+                            style={{width: "800px"}}
+                            alt="Karplus Strong"
+                        />
+                        <ThirdHeader text="Simple but Effective"/>
                     </section>
                     <section>
                         <SecondHeader text="Wave Visualization"/>
-                        <img src="/resources/img/rpiDefense/WaveVisualization.png" width="900" alt="Wave Visualization"/>
+                        <img
+                            src="/resources/img/rpiDefense/WaveVisualization.png"
+                            style={{width: "900px"}}
+                            alt="Wave Visualization"/>
                     </section>
                     <section>
                         <SecondHeader text="UI Design"/>
-                        <img src="/resources/img/rpiDefense/UIDesign.png" width="600" alt="UI Design"/>
+                        <img
+                            src="/resources/img/rpiDefense/UIDesign.png"
+                            style={{width: "600px"}}
+                            alt="UI Design"/>
                     </section>
                 </section>
 
@@ -352,7 +372,14 @@ const RPiDefense = () => {
                     </section>
                     <section>
                         <SecondHeader text="Obstacles"/>
-                        {/*TODO 遇到的困难*/}
+                        <ul className="ui_content">
+                            <li className="li_content">Time-critical features of audio application.</li>
+                            <li className="li_content">The program works well on Windows but <span className="fail-strong">FAILED</span> on Raspberry Pi.</li>
+                            <li className="li_content">Maintaining the code for both platforms almost drives me crazy.</li>
+                            <li className="li_content">Without any industrial design.</li>
+                            <li className="li_content">Incomprehensible concurrency bugs</li>
+                            <li className="li_content">Architecting a complex system.</li>
+                        </ul>
                     </section>
                     <section>
                         <SecondHeader text="Labour Division"/>

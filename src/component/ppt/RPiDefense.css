@@ -14,3 +14,8 @@
 .midi-note-table {
     line-height: 16px;
 }
+
+.fail-strong {
+    color: red;
+    font-weight: 700;
+}

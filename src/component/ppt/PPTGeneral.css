@@ -17,12 +17,13 @@
     font-size: 28px;
     font-weight: 500;
     line-height: 60px;
-    width: 90%;
+    width: 100%;
 }
 
 .li_content {
     margin-bottom: -10px;
     font-family: sans-serif, "Times New Roman", Lato, SimHei;
+    /*line-height: 40px;*/
 }
 
 .result_table {
