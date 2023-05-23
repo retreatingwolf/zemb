@@ -2,7 +2,8 @@ import React from "react";
 import Reveal from "reveal.js";
 import 'reveal.js/dist/reveal.css';
 import {FirstHeader, MainSlide, SecondHeader, ThirdHeader} from "./PPTComponents";
-
+import {Table} from "@douyinfe/semi-ui";
+import "./RPiDefense.css"
 
 const RPiDefense = () => {
     React.useEffect(() => {
@@ -10,11 +11,199 @@ const RPiDefense = () => {
             backgroundTransition: 'zoom',
             transition: 'slide',
             transitionSpeed: 'fast',
-            // autoPlayMedia: true,
             margin: 0,
         })
         deck.initialize();
     },[])
+
+    const midi_note_column = [
+        {
+            title: "Midi Note",
+            dataIndex: "midi_note"
+        },
+        {
+            title: "Note Name",
+            dataIndex: "note_name"
+        },
+        {
+            title: "Frequency",
+            dataIndex: "frequency"
+        }
+    ]
+
+    const midi_note_data = [
+        {
+            midi_note: "45",
+            note_name: "A2",
+            frequency: "110"
+        },
+        {
+            midi_note: "46",
+            note_name: "A#2/Bb2",
+            frequency: "116.54"
+        },
+        {
+            midi_note: "...",
+            note_name: "...",
+            frequency: "..."
+        },
+        {
+            midi_note: "80",
+            note_name: "G#5/Ab5",
+            frequency: "830.61"
+        },
+        {
+            midi_note: "81",
+            note_name: "A5",
+            frequency: "880"
+        },
+    ]
+
+    const midi_event_column = [
+        {
+            title: "ID",
+            dataIndex: "id"
+        },
+        {
+            title: "Function Code",
+            dataIndex: "function_code"
+        },
+        {
+            title: "Param1",
+            dataIndex: "param1"
+        },
+        {
+            title: "Param2",
+            dataIndex: "param2"
+        },
+        {
+            title: "Param3",
+            dataIndex: "param3"
+        },
+        {
+            title: "Function",
+            dataIndex: "function"
+        }
+    ]
+
+    const midi_event_data = [
+        {
+            id: 1,
+            function_code: 144,
+            param1: "Midi Note",
+            param2: "Volume",
+            param3: "0",
+            function: "Note On"
+        },
+        {
+            id: 2,
+            function_code: 128,
+            param1: "Midi Note",
+            param2: "0",
+            param3: "0",
+            function: "Note Off"
+        },
+        {
+            id: 3,
+            function_code: 176,
+            param1: "1",
+            param2: "On/Off",
+            param3: "0",
+            function: "Mod"
+        },
+        {
+            id: 4,
+            function_code: 192,
+            param1: "Control Code",
+            param2: "0",
+            param3: "0",
+            function: "Control Mod"
+        },
+    ]
+
+    const repository_column = [
+        {
+            title: "Repository",
+            dataIndex: "repository",
+            render: (text, record, index) => {
+                return (
+                    <a href={text} target="_blank" rel="noreferrer">{text}</a>
+                )
+            }
+        },
+        {
+            title: "Function",
+            dataIndex: "function"
+        }
+    ]
+
+    const repository_data = [
+        {
+            repository: "https://gitee.com/zhouzhoukang/zsound",
+            function: "CadoHero, the audio synthesizer."
+        },
+        {
+            repository: "https://gitee.com/mumu2002/pil-simple-graphics",
+            function: "For UI Design. Contains some ui icons."
+        },
+        {
+            repository: "https://gitee.com/zhouzhoukang/zemb",
+            function: "Frontend that has been deployed."
+        },
+        {
+            repository: "https://gitee.com/gu-xiaowen-123/ggxw",
+            function: "Pure frontend code."
+        },
+        {
+            repository: "https://gitee.com/chenshoufeng/mp3_wav",
+            function: "Code for audio formats transform."
+        }
+    ]
+
+    const labour_division_column = [
+        {
+            title: "Name",
+            dataIndex: "name",
+            width: 220,
+            render: (text, record, index) => {
+                return (
+                    <a href={record.homepage} target="_blank" rel="noreferrer">{text}</a>
+                )
+            }
+        },
+        {
+            title: "Workload",
+            dataIndex: "workload"
+        }
+    ]
+
+    const labour_division_data = [
+        {
+            name: "Zhou Hang",
+            workload: "Propose project objectives, Synthesizer design, System Architecture",
+            homepage: "https://gitee.com/zhouzhoukang"
+        },
+        {
+            name: "Xiao Xiang ",
+            workload: "UI Design, Document polishing",
+            homepage: "https://gitee.com/mumu2002"
+        },
+        {
+            name: "Chen Dongjin",
+            workload: "Circuit Design, Audio file format conversion",
+            homepage: "https://gitee.com/chenshoufeng"
+        },
+        {
+            name: "Dong Jiangnan",
+            workload: "Web Back-end Design",
+            homepage: "https://gitee.com/djn948998154"
+        },
+        {
+            name: "Gu Xiaowen",
+            workload: "Web Front-end Design",
+            homepage: "https://gitee.com/gu-xiaowen-123"
+        },
+    ]
 
     const author_info = [
         {key: '1', stuid: "200855528", name: " Zhou Hang (周航)"},
@@ -86,16 +275,50 @@ const RPiDefense = () => {
                     </section>
                     <section>
                         <SecondHeader text="Midi Protocol"/>
-                        {/*TODO 表格*/}
+                        <ThirdHeader text="Midi Note"/>
+                        <Table
+                            className="table-common midi-note-table"
+                            columns={midi_note_column}
+                            dataSource={midi_note_data}
+                            pagination={false}
+                            />
+                        <br/>
+                        <ThirdHeader text="And we need to implement 48~108(C3~C8) notes"/>
+                    </section>
+                    <section>
+                        <SecondHeader text="Midi Protocol"/>
+                        <ThirdHeader text="Midi Events"/>
+                        <Table
+                            className="table-common"
+                            columns={midi_event_column}
+                            dataSource={midi_event_data}
+                            pagination={false}
+                            />
+                        <img
+                            className="fragment"
+                            src="/resources/img/rpiDefense/easykey.jpg"
+                            alt="easykey"
+                            style={{width: "500px"}}
+                        />
                     </section>
 
                     <section>
                         <SecondHeader text="Synthesizer"/>
-                        <img src="/resources/img/rpiDefense/SynthFlow.png" width="700" alt="Synthesizer"/>
+                        <img
+                            src="/resources/img/rpiDefense/SynthFlow.png"
+                            style={{width: "700px"}}
+                            alt="Synthesizer"/>
                     </section>
                     <section>
                         <SecondHeader text="Chord"/>
-                        <img src="/resources/img/rpiDefense/ChordFramework.png" width="800" alt="Chord"/>
+                        <ThirdHeader text="How to detect simultaneous key presses?"/>
+                        <img
+                            className="fragment"
+                            src="/resources/img/rpiDefense/ChordFramework.png"
+                            style={{width: "950px"}}
+                            alt="Chord"
+                        />
+
                     </section>
                     <section>
                         <SecondHeader text="Timbres"/>
@@ -121,7 +344,11 @@ const RPiDefense = () => {
                     </section>
                     <section>
                         <SecondHeader text="Repositories"/>
-                        {/*TODO 产生的仓库*/}
+                        <Table
+                            className="table-common repository-table"
+                            columns={repository_column}
+                            dataSource={repository_data}
+                            pagination={false}/>
                     </section>
                     <section>
                         <SecondHeader text="Obstacles"/>
@@ -129,7 +356,11 @@ const RPiDefense = () => {
                     </section>
                     <section>
                         <SecondHeader text="Labour Division"/>
-                        {/*TODO 分工合作表格*/}
+                        <Table
+                            className="table-common labour-division-table"
+                            columns={labour_division_column}
+                            dataSource={labour_division_data}
+                            pagination={false}/>
                     </section>
                     <section>
                         <FirstHeader text="End." />

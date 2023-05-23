@@ -100,7 +100,11 @@ const RPiPPT = () => {
                         <ThirdHeader text="Make an Electronic Keyboard"/>
                         <ThirdHeader text="Based on Raspberry Pi"/>
                         {/*<ThirdHeader text="Sounds EASY?"/>*/}
-                        <img className="fragment" src="/resources/img/rpi/framework.png" alt="Function Framework" style={{width: '850px'}}/>
+                        <img
+                            className="fragment"
+                            src="/resources/img/rpi/framework.png"
+                            alt="Function Framework"
+                            style={{width: '850px'}}/>
                     </section>
                 </section>
 

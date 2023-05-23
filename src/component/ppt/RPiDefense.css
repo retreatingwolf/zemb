@@ -1,0 +1,16 @@
+.table-common {
+    font-family: sans-serif, "Times New Roman";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.repository-table {
+}
+
+.labour-division-table {
+    line-height: 27px;
+}
+
+.midi-note-table {
+    line-height: 16px;
+}
