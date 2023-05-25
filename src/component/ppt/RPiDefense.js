@@ -190,7 +190,7 @@ const RPiDefense = () => {
         },
         {
             name: "Chen Dongjin",
-            workload: "Circuit Design, Audio file format conversion",
+            workload: "Circuit Design, Video Editing",
             homepage: "https://gitee.com/chenshoufeng"
         },
         {
@@ -231,8 +231,10 @@ const RPiDefense = () => {
                         <ThirdHeader text="3. Technical View - HOW"/>
 
                         <ul className="ui_content">
-                            <li className="li_content">Midi Keyboard Driver</li>
+                            <li className="li_content">Midi Protocol</li>
                             <li className="li_content">Synthesizer Design</li>
+                            <li className="li_content">Midi Keyboard Driver</li>
+                            <li className="li_content">Timbre Implementation</li>
                             <li className="li_content">Waveform Visualization</li>
                             <li className="li_content">Web</li>
                         </ul>
@@ -261,11 +263,17 @@ const RPiDefense = () => {
                     </section>
                     <section>
                         <SecondHeader text="Circuit Connection"/>
-                        <img src="/resources/img/rpiDefense/circuit.png" width="700" alt="Circuit Connection"/>
+                        <img
+                            src="/resources/img/rpiDefense/circuit.png"
+                            style={{width: "700px"}}
+                            alt="Circuit Connection"/>
                     </section>
                     <section>
                         <SecondHeader text="GPIO Detail"/>
-                        <img src="/resources/img/rpiDefense/gpio.svg" width="900" alt="GPIO detail"/>
+                        <img
+                            src="/resources/img/rpiDefense/gpio.svg"
+                            style={{width: "900px"}}
+                            alt="GPIO detail"/>
                     </section>
                 </section>
 
