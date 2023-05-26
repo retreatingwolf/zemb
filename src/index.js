@@ -7,11 +7,9 @@ import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
       <BrowserRouter>
           <App />
       </BrowserRouter>
-  // </React.StrictMode>
 );
 
 // 如果你想要测试某个函数的性能, 可以将一个函数传递给reportWebVitals,

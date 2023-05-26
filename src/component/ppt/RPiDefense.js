@@ -224,7 +224,7 @@ const RPiDefense = () => {
                     />
                     {/* 1-2 综述概览 */}
                     <section className="detail-slide">
-                        <SecondHeader text="Content"/>
+                        <SecondHeader text="Contents"/>
 
                         <ThirdHeader text="1. Introduction - WHY"/>
                         <ThirdHeader text="2. Functional View - WHAT"/>
@@ -364,6 +364,17 @@ const RPiDefense = () => {
                             style={{width: "600px"}}
                             alt="UI Design"/>
                     </section>
+
+                    <section>
+                        <SecondHeader text="Demo Video"/>
+                        <iframe
+                            title="demo-video"
+                            src="//player.bilibili.com/player.html?aid=571586995&bvid=BV1yz4y1B7HE&cid=1142251585&page=1&autoplay=0"
+                            allowFullScreen="true"
+                            style={{width: "700px", height: "500px"}}
+                        >
+                        </iframe>
+                    </section>
                 </section>
 
                 <section>
@@ -377,6 +388,12 @@ const RPiDefense = () => {
                             columns={repository_column}
                             dataSource={repository_data}
                             pagination={false}/>
+
+                        <img
+                            src="/resources/img/rpiDefense/WhyGit.png"
+                            alt="WhyGit"
+                            style={{width: "260px"}}
+                        />
                     </section>
                     <section>
                         <SecondHeader text="Obstacles"/>
@@ -399,6 +416,11 @@ const RPiDefense = () => {
                     </section>
                     <section>
                         <FirstHeader text="End." />
+                        <img
+                            src="/resources/img/rpiDefense/tux-source.jpg"
+                            alt="tux-source"
+                            style={{width: "500px"}}
+                        />
                     </section>
                 </section>
             </div>
