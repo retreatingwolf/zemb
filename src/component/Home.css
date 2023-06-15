@@ -1,9 +1,29 @@
 .home-container {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
     /*justify-content: center;*/
     /*text-align: center;*/
+    margin-left: 50px;
+    margin-top: 50px;
 }
+
+/* ===================== 基本信息 ===================== */
+.basic-info-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-photo-img {
+    width: 200px;
+    border: red solid 3px;
+}
+
+.basic-info {
+    margin-left: 10px;
+    border: red solid 3px;
+}
+
+/* ============ TEMP ================ */
 
 .home-title {
     text-align: center;
@@ -11,8 +31,9 @@
 }
 
 .apple-logo {
+    width: 300px;
     /*border: solid red 2px;*/
-    margin: 0;
+    /*margin: 0;*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -23,9 +44,9 @@
 
 .home-header {
     /*background-color: #282c34;*/
-    min-height: 100vh;
+    /*min-height: 50vh;*/
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     /*设置item在交叉轴上如何对齐*/
     align-items: center;
     /*设置item在主轴上如何对齐*/
