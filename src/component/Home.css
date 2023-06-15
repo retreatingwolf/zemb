@@ -5,6 +5,37 @@
     /*text-align: center;*/
     margin-left: 50px;
     margin-top: 50px;
+    font-family: "Times New Roman", "华文中宋", serif;
+    width: 650px;
+    /*border: red solid 3px;*/
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0 0 10px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 10px 0 10px;
+}
+
+h3 {
+    margin: 10px 0 0;
+}
+
+h4 {
+    margin: 10px 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1E90FF;
+}
+
+a:hover {
+    color: #4169E1;
+    text-decoration: underline;
 }
 
 /* ===================== 基本信息 ===================== */
@@ -15,15 +46,58 @@
 
 .profile-photo-img {
     width: 200px;
-    border: red solid 3px;
 }
 
 .basic-info {
-    margin-left: 10px;
-    border: red solid 3px;
+    margin-left: 30px;
 }
 
-/* ============ TEMP ================ */
+.basic-info-intern {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ===================== 项目经历 ===================== */
+.project {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.project-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-time {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.project-description {
+    /*border: red solid 2px;*/
+    margin: 0;
+    padding: 0;
+}
+
+.subprojects {
+    margin-left: 10px;
+}
+
+/* ===================== 发表论文 ===================== */
+.publication {
+    font-size: 20px;
+}
+
+.publication-description {
+    margin: 0;
+    padding: 0;
+}
+
+/* ============ apple ================ */
 
 .home-title {
     text-align: center;
