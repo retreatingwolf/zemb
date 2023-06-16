@@ -1,3 +1,4 @@
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -16,8 +17,8 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
-    margin: 10px 0 10px;
+    font-size: 25px;
+    margin: 10px 0 0;
 }
 
 h3 {
@@ -38,6 +39,10 @@ a:hover {
     text-decoration: underline;
 }
 
+ul {
+    margin-top: 2px;
+}
+
 /* ===================== 基本信息 ===================== */
 .basic-info-container {
     display: flex;
@@ -45,7 +50,7 @@ a:hover {
 }
 
 .profile-photo-img {
-    width: 200px;
+    width: 150px;
 }
 
 .basic-info {
@@ -97,44 +102,4 @@ a:hover {
     padding: 0;
 }
 
-/* ============ apple ================ */
-
-.home-title {
-    text-align: center;
-    font-size: 40px;
-}
-
-.apple-logo {
-    width: 300px;
-    /*border: solid red 2px;*/
-    /*margin: 0;*/
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .apple-logo {
-        animation: apple-logo-spin infinite 20s linear;
-    }
-}
-
-.home-header {
-    /*background-color: #282c34;*/
-    /*min-height: 50vh;*/
-    display: flex;
-    /*flex-direction: column;*/
-    /*设置item在交叉轴上如何对齐*/
-    align-items: center;
-    /*设置item在主轴上如何对齐*/
-    /*justify-content: center;*/
-    /*font-size: calc(10px + 2vmin);*/
-    /*color: white;*/
-}
-
-@keyframes apple-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 

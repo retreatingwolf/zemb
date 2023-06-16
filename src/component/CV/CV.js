@@ -1,12 +1,30 @@
-import "./Home.css"
-
+import "./CV.css"
+import {
+    Routes, Route, Link
+} from "react-router-dom"
+import RPi from "../RPi/RPi";
+import Network from "../ppt/Network";
+import RPiPPT from "../ppt/RPiPPT";
+import RPiDefense from "../ppt/RPiDefense";
+import Setting from "../Setting/Setting";
+import Home from "../Home/Home";
 
 // https://abcdabcd987.com/about/
 // https://blog.jm233333.com/cv/zh-cn/
 
-const Home = () => {
+const CV = () => {
     return (
         <div className="home-container">
+
+            <Routes>
+                <Route path="/rpi" element={<RPi />}/>
+                <Route path="/network" element={<Network />}/>
+                <Route path="/rpippt" element={<RPiPPT />}/>
+                <Route path="/rpidefense" element={<RPiDefense/>}/>
+                <Route path="/setting" element={<Setting />} />
+                <Route path="/home" element={<Home />} />
+            </Routes>
+
             <div className="basic-info-container">
                 <img
                     className="profile-photo-img"
@@ -19,9 +37,9 @@ const Home = () => {
                     <div className="basic-info-intern">计算机科学与技术</div>
                     <div className="basic-info-intern">hangzhou@njfu.edu.cn</div>
                     <div className="basic-info-intern">
-                        <a href="http://47.100.107.53/CV">CV</a>&nbsp;
+                        <a href="http://47.100.107.53">CV</a>&nbsp;
                         <a href="https://gitee.com/zhouzhoukang">Gitee</a>&nbsp;
-                        <a href="http://47.100.107.53/home">Blog</a>
+                        <Link to="/home">Blog</Link>
                     </div>
                 </div>
             </div>
@@ -134,27 +152,17 @@ const Home = () => {
             <div className="publications-container">
                 <h2>证书奖项</h2>
                 <ul>
-                    <li>2023蓝桥杯江苏省一等奖</li>
+                    <li>2023蓝桥杯全国三等奖</li>
                     <li>2020全国大学生英语竞赛三等奖</li>
                     <li>2021南京林业大学一等奖学金</li>
                     <li>CET-6(533)</li>
                 </ul>
             </div>
-
-            <header className="home-header">
-                <img
-                    src="/resources/img/common/apple.png"
-                    className="apple-logo"
-                    alt="apple" />
-            </header>
-
             <footer>
-                <p>Last Update: June 15, 2023</p>
+                <p>Last Update: June 16, 2023</p>
             </footer>
-
-
         </div>
     )
 }
 
-export default Home
+export default CV

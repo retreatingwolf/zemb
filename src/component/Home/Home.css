@@ -1,0 +1,53 @@
+
+/* ============ apple ================ */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*text-align: center;*/
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: "Times New Roman", "华文中宋", serif;
+    width: 650px;
+    /*border: red solid 3px;*/
+}
+
+.home-title {
+    text-align: center;
+    font-size: 40px;
+}
+
+.apple-logo {
+    width: 300px;
+    /*border: solid red 2px;*/
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .apple-logo {
+        animation: apple-logo-spin infinite 20s linear;
+    }
+}
+
+.home-header {
+    /*background-color: #282c34;*/
+    /*min-height: 50vh;*/
+    display: flex;
+    /*flex-direction: column;*/
+    /*设置item在交叉轴上如何对齐*/
+    align-items: center;
+    /*设置item在主轴上如何对齐*/
+    /*justify-content: center;*/
+    /*font-size: calc(10px + 2vmin);*/
+    /*color: white;*/
+}
+
+@keyframes apple-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

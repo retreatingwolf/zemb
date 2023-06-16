@@ -1,0 +1,22 @@
+.main-layout {
+    /*border: 1px solid var(--semi-color-border);*/
+    height: 100vh;
+}
+
+.right-side {
+    background-color: var(--semi-color-bg-1);
+    font-size: 20px;
+}
+
+.main-nav {
+    height: 100%;
+}
+
+.main-nav-header {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.main-nav-items {
+    font-size: 25px;
+}
