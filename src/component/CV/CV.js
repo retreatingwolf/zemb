@@ -1,13 +1,4 @@
 import "./CV.css"
-import {
-    Routes, Route, Link
-} from "react-router-dom"
-import RPi from "../RPi/RPi";
-import Network from "../ppt/Network";
-import RPiPPT from "../ppt/RPiPPT";
-import RPiDefense from "../ppt/RPiDefense";
-import Setting from "../Setting/Setting";
-import Home from "../Home/Home";
 
 // https://abcdabcd987.com/about/
 // https://blog.jm233333.com/cv/zh-cn/
@@ -15,16 +6,6 @@ import Home from "../Home/Home";
 const CV = () => {
     return (
         <div className="home-container">
-
-            <Routes>
-                <Route path="/rpi" element={<RPi />}/>
-                <Route path="/network" element={<Network />}/>
-                <Route path="/rpippt" element={<RPiPPT />}/>
-                <Route path="/rpidefense" element={<RPiDefense/>}/>
-                <Route path="/setting" element={<Setting />} />
-                <Route path="/home" element={<Home />} />
-            </Routes>
-
             <div className="basic-info-container">
                 <img
                     className="profile-photo-img"
@@ -39,7 +20,7 @@ const CV = () => {
                     <div className="basic-info-intern">
                         <a href="http://47.100.107.53">CV</a>&nbsp;
                         <a href="https://gitee.com/zhouzhoukang">Gitee</a>&nbsp;
-                        <Link to="/home">Blog</Link>
+                        <a href="/resources/pages/index.html">Blog</a>
                     </div>
                 </div>
             </div>
@@ -48,28 +29,28 @@ const CV = () => {
             </div>
 
             <div className="education-background-container">
-                <h2>教育背景</h2>
+                <h2>== 教育背景 ==</h2>
                 <ul>
-                    <li>2020.9至今: 大三在读，南京林业大学，计算机科学与技术</li>
-                    <li>2017.9-2020.7: 高中，江苏省天一中学</li>
+                    <li>2020.9 - 今: 大三在读，南京林业大学，计算机科学与技术</li>
+                    <li>2017.9 - 2020.7: 高中，江苏省天一中学</li>
                 </ul>
             </div>
 
             <div className="interest-container">
-                <h2>个人兴趣</h2>
+                <h2>== 个人兴趣 ==</h2>
                 <ul>
-                    <li>语言：Python、C/C++、Java、JavaScript、ANTLR4、Coq ……</li>
-                    <li>方向：编译原理、操作系统、软件验证、数据结构 ……</li>
-                    <li>Linux：Makefile、GDB、Fish ……</li>
+                    <li>语言：Python、C/C++、Java、JavaScript、RISC-V、ANTLR4、Coq ……</li>
+                    <li>方向：编译原理、操作系统、软件验证、体系结构 ……</li>
+                    <li>Linux Tool Chain</li>
                 </ul>
             </div>
 
             <div className="projects-container">
-                <h2>项目经历</h2>
+                <h2>== 项目经历 ==</h2>
                 <div className="projects">
                     <div className="project">
                         <div className="project-name">
-                            <h3><a href="https://gitee.com/zhouzhoukang/zre">编译器前端</a></h3>
+                            <h3><a href="https://gitee.com/zhouzhoukang/zre">- 编译器前端 -</a></h3>
                             <div className="project-time">2022.10 - 2022.12</div>
                         </div>
                         <div className="project-descriptions">
@@ -79,7 +60,7 @@ const CV = () => {
 
                     <div className="project">
                         <div className="project-name">
-                            <h3><a href="https://gitee.com/zhouzhoukang/yolodetector">基于注意力机制的多尺度林火图像检测研究</a></h3>
+                            <h3><a href="https://gitee.com/zhouzhoukang/yolodetector">- 基于注意力机制的多尺度林火图像检测研究 -</a></h3>
                             <div className="project-time">2022.11 - 2023.02</div>
                         </div>
                         <div className="project-descriptions">
@@ -89,7 +70,7 @@ const CV = () => {
 
                     <div className="project">
                         <div className="project-name">
-                            <h3><a href="https://gitee.com/zhouzhoukang/zsound">音频合成器</a></h3>
+                            <h3><a href="https://gitee.com/zhouzhoukang/zsound">- 音频合成器 -</a></h3>
                             <div className="project-time">2023.04 - 2023.05</div>
                         </div>
                         <div className="project-descriptions">
@@ -99,7 +80,7 @@ const CV = () => {
 
                     <div className="project">
                         <div className="project-name">
-                            <h3><a href="https://gitee.com/zhouzhoukang/my-ml">机器学习课程设计</a></h3>
+                            <h3><a href="https://gitee.com/zhouzhoukang/my-ml">- 机器学习课程设计 -</a></h3>
                             <div className="project-time">2023.05 - 2023.06</div>
                         </div>
                         <div className="project-descriptions">
@@ -108,7 +89,7 @@ const CV = () => {
                     </div>
 
                     <div className="project">
-                        <h3>各种GUI项目</h3>
+                        <h3>- 各种GUI项目 -</h3>
                         <div className="subprojects">
                             <h4><a href="https://gitee.com/zhouzhoukang/raidsimulator">OSTEP可视化界面</a></h4>
                             <div className="project-descriptions">
@@ -131,13 +112,21 @@ const CV = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="project">
+                        <div className="project-name">
+                            <h3><a href="https://gitee.com/zhouzhoukang/cs61c-proj3-cpu">- 具有二级流水线的RISC-V处理器设计 -</a></h3>
+                            <div className="project-time">2023.07</div>
+                        </div>
+                        <div className="project-descriptions">
+                            <p className="project-description">CS61C Project 3 - 支持36条RISC-V指令以及具备二级流水线</p>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
 
             <div className="publications-container">
-                <h2>发表论文</h2>
+                <h2>== 发表论文 ==</h2>
                 <ul>
                     <li>
                         <div className="publication">
@@ -150,16 +139,16 @@ const CV = () => {
             </div>
 
             <div className="publications-container">
-                <h2>证书奖项</h2>
+                <h2>== 证书奖项 ==</h2>
                 <ul>
-                    <li>2023蓝桥杯全国三等奖</li>
-                    <li>2020全国大学生英语竞赛三等奖</li>
-                    <li>2021南京林业大学一等奖学金</li>
-                    <li>CET-6(533)</li>
+                    <li>蓝桥杯全国软件和信息技术专业人才大赛全国总决赛C/C++程序设计大学B组三等奖 2023.06</li>
+                    <li>全国大学生英语竞赛(NECCS)三等奖 2021.05</li>
+                    <li>南京林业大学一等奖学金 2022.11</li>
+                    <li>CET-4(580) CET-6(533)</li>
                 </ul>
             </div>
             <footer>
-                <p>Last Update: June 16, 2023</p>
+                <p>Last Update: July 23, 2023</p>
             </footer>
         </div>
     )
