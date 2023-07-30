@@ -20,7 +20,7 @@ const CV_En = () => {
           <div className="basic-info-intern">
             <a href="http://47.100.107.53">CV(PDF)</a>&nbsp;
             <a href="/">CV(Chinese)</a>&nbsp;
-            <a href="https://gitee.com/zhouzhoukang" target="_blank">Gitee</a>&nbsp;
+            <a href="https://gitee.com/zhouzhoukang" target="_blank" rel="noreferrer">Gitee</a>&nbsp;
             <a href="/Blog">Blog</a>
           </div>
         </div>

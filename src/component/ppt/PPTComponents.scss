@@ -1,27 +1,27 @@
 /* 标题格式 */
-.first_header {
+.first-header {
     /*letter-spacing: 2px;*/
     font-size:60px;
-    font-family: sans-serif, "Times New Roman", Lato, SimHei, sans-serif;
+    font-family: Lato, "Times New Roman", 华文中宋, SimHei, sans-serif;
     font-weight: 600;
 }
 
-.second_header {
+.second-header {
     font-size: 48px;
     /*letter-spacing: 2px;*/
-    font-family: sans-serif, "Times New Roman", Lato, sans-serif;
+    font-family: Lato, "Times New Roman", 华文中宋, SimHei, sans-serif;
     font-weight: 600;
     padding: 0 25px 5px;
     border-bottom: 2px solid skyblue;
     text-align: left;
 }
 
-.third_header {
+.third-header {
     font-size: 32px;
     font-weight: 500;
-    font-family: sans-serif, "Times New Roman", Lato, SimHei, serif;
+    font-family: Lato, "Times New Roman", 华文中宋, SimHei, sans-serif;
     text-align: left;
-    padding: 0 25px;
+    padding: 0 30px;
 }
 
 .ppt-main-layout {
@@ -35,7 +35,7 @@
 .authors-info {
     font-size: 25px;
     font-weight: 590;
-    font-family: "Times New Roman", 楷体, serif;
+    font-family: "Times New Roman", 华文中宋, serif;
     display: inline-block;
     /*border: solid red 2px;*/
 }
@@ -60,7 +60,8 @@
 
 .logo-name {
     font-size: 25px;
-    font-family: "Times New Roman", 楷体, serif;
+    font-family: "Times New Roman", 华文中宋, serif;
+    text-decoration: none;
 }
 
 .logo-img {
