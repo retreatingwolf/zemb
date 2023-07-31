@@ -8,19 +8,23 @@ const Blog = () => {
   return (
     <div className="blog-container">
       <div className="blog-title">
-        Zhou Hang's Blog (TODO)
+        <h1>Zhou Hang's Blog (TODO)</h1>
       </div>
 
-      <Button onClick={() => {navigate('/blog/ne-defense');}}>
-        计算机网络实习结题报告
+      <Button size="large" onClick={() => {navigate('/blog/ne-defense');}}>
+        计网工实习结题报告
       </Button><br/>
 
-      <Button onClick={() => {navigate('/blog/rpi-open');}}>
+      <Button size="large" onClick={() => {navigate('/blog/rpi-open');}}>
         嵌入式项目开题报告
       </Button><br/>
 
-      <Button onClick={() => {navigate('/blog/rpi-defense');}}>
+      <Button size="large" onClick={() => {navigate('/blog/rpi-defense');}}>
         嵌入式项目结题报告
+      </Button><br/>
+
+      <Button size="large" onClick={() => {navigate('/blog/setting');}}>
+        设置
       </Button><br/>
 
       <div className="apple-container">

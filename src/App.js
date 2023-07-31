@@ -2,7 +2,7 @@ import React from "react";
 import { unstable_HistoryRouter as HistoryRouter, Routes, Route } from 'react-router-dom'
 import { history } from './utils'
 import { lazy, Suspense } from 'react'
-import "./App.css"
+import "./App.scss"
 
 // 按需导入组件
 const CV = lazy(() => import('./pages/CV'))
@@ -11,6 +11,7 @@ const Blog = lazy(() => import('./pages/Blog'))
 const NEDefense = lazy(() => import('./pages/NEDefense'))
 const RPiOpen = lazy(() => import('./pages/RPiOpen'))
 const RPiDefense = lazy(() => import('./pages/RPiDefense'))
+const Setting = lazy(() => import('./pages/Setting'))
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
         <div className="App">
           <Suspense
               fallback={
-                <div style={{textAlign: 'center', marginTop: 200, fontSize: 100}}>
-                  loading...
+                <div className="loading-container">
+                  加载中...
                 </div>
               }
           >
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/blog/ne-defense" element={<NEDefense />}/>
               <Route path="/blog/rpi-open" element={<RPiOpen />}/>
               <Route path="/blog/rpi-defense" element={<RPiDefense />}/>
+              <Route path="/blog/setting" element={<Setting />}/>
             </Routes>
           </Suspense>
         </div>
