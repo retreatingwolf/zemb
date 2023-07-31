@@ -43,7 +43,7 @@ const MainSlide = ({ title, authors }) => {
                 <div className="logo">
                     <a href="https://www.njfu.edu.cn/" style={{textDecoration: 'none'}}>
                         <p className="logo-name">Nanjing Forestry University</p>
-                        <img className="logo-img" src="/resources/img/common/NFU_logo.jpg"
+                        <img className="logo-img" src="/resources/img/common/NFU_logo.webp"
                              alt="南京林业大学"/>
                     </a>
                 </div>
@@ -51,7 +51,7 @@ const MainSlide = ({ title, authors }) => {
                 <div className="logo">
                     <a href="https://it.njfu.edu.cn/" style={{textDecoration: 'none'}}>
                         <p className="logo-name">Information Science and Technology School</p>
-                        <img className="logo-img" src="/resources/img/common/cs_logo.jpg"
+                        <img className="logo-img" src="/resources/img/common/cs_logo.webp"
                              alt="信息科学技术学院"/>
                     </a>
                 </div>

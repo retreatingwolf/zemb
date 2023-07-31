@@ -135,7 +135,7 @@ const NEDefense = () => {
           {/*2-2 : 拓扑结构*/}
           <section className="detail-slide">
             <SecondHeader text="拓扑结构"/>
-            <img src="/resources/img/network/拓扑图.png" alt="拓扑图"/>
+            <img src="/resources/img/network/topology.webp" alt="拓扑图"/>
             <ul className="ui_content">
               <li>PC0，PC1，PC2在同一个网段，PC3在另一个网段</li>
               <li>计划将PC0，PC1划入VLAN2；将PC2，PC3划入VLAN3</li>
@@ -152,7 +152,7 @@ const NEDefense = () => {
               dataSource={result_table_data}
               pagination={false}
             />
-            <img src="/resources/img/network/p0-2.png" alt="p0-2"/>
+            <img src="/resources/img/network/p0-2.webp" alt="p0-2"/>
           </section>
 
           {/*2-4 : 配置总结*/}
@@ -185,7 +185,7 @@ const NEDefense = () => {
           {/*3-2 : 需求分析*/}
           <section className="detail-slide">
             <SecondHeader text="需求分析"/>
-            <img src="/resources/img/network/gui_design.png" alt="界面设计" className="r-stretch"/>
+            <img src="/resources/img/network/gui_design.webp" alt="界面设计" className="r-stretch"/>
             <ul className="ui_content">
               <li>邮件服务器使用例如腾讯和网易的邮箱服务</li>
               <li>通过SMTP/POP3协议收发删邮件及其附件</li>
@@ -217,7 +217,7 @@ const NEDefense = () => {
           {/*3-4 : 客户端软件设计*/}
           <section className="detail-slide">
             <SecondHeader text="客户端软件设计"/>
-            <img src="/resources/img/network/client_thread.png" alt="客户端线程" height="250"/>
+            <img src="/resources/img/network/client_thread.webp" alt="客户端线程" height="250"/>
             <ul className="ui_content">
               <li className="li_content">多线程设计：避免GUI界面卡死</li>
               <li className="li_content">邮箱服务器：邮件收，发，删，附件收发</li>
@@ -229,7 +229,7 @@ const NEDefense = () => {
           <section className="detail-slide">
             <SecondHeader text="服务器软件设计"/>
             <ThirdHeader text="简易调试器 (基础设施)"/>
-            <img src="/resources/img/network/debugger.png" alt="调试器" height="250"/>
+            <img src="/resources/img/network/debugger.webp" alt="调试器" height="250"/>
             <ul className="ui_content">
               <li>在服务器接收线程之前套一个调试器，通过调试器控制服务器软件</li>
               <li>通过指令查看当前服务器进程的状态</li>
@@ -241,14 +241,14 @@ const NEDefense = () => {
           <section className="detail-slide">
             <SecondHeader text="服务器软件设计"/>
             <ThirdHeader text="服务端线程设计"/>
-            <img src="/resources/img/network/server_thread.png" alt="服务端线程" height="400"/>
+            <img src="/resources/img/network/server_thread.webp" alt="服务端线程" height="400"/>
           </section>
 
           {/*3-7 : 数据传输协议设计*/}
           <section className="detail-slide">
             <SecondHeader text="数据传输协议设计"/>
             <ThirdHeader text="数据包格式"/>
-            <img src="/resources/img/network/protocol.png" alt="协议" height="250"/>
+            <img src="/resources/img/network/protocol.webp" alt="协议" height="250"/>
             <ul className="ui_content">
               <li className="li_content">发送之前先计算指令的长度，将该长度信息放在数据包之前</li>
               <li className="li_content">指令采用json序列化字典发送的形式</li>
@@ -260,7 +260,7 @@ const NEDefense = () => {
           <section className="detail-slide">
             <SecondHeader text="数据库设计"/>
             <ThirdHeader text="E-R图"/>
-            <img src="/resources/img/network/er.png" alt="E-R图" height="300"/>
+            <img src="/resources/img/network/er.webp" alt="E-R图" height="300"/>
             <ul className="ui_content">
               <li>目前的需求只有邮件草稿云端存储</li>
               <li>只涉及一个一对多的关系</li>

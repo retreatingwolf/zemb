@@ -9,7 +9,7 @@ const CV = () => {
       <div className="basic-info-container">
         <img
           className="profile-photo-img"
-          src="/resources/img/common/profile_photo.jpg"
+          src="/resources/img/common/profile_photo.webp"
           alt="profile"
         />
         <div className="basic-info">

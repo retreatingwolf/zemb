@@ -105,7 +105,7 @@ const RPiOpen = () => {
             {/*<ThirdHeader text="Sounds EASY?"/>*/}
             <img
               className="fragment"
-              src="/resources/img/rpi/framework.png"
+              src="/resources/img/rpi/framework.webp"
               alt="Function Framework"
               style={{width: '850px'}}/>
           </section>

@@ -25,7 +25,7 @@ const Blog = () => {
 
       <div className="apple-container">
         <img
-          src="/resources/img/common/apple.png"
+          src="/resources/img/common/apple.webp"
           className="apple-logo"
           alt="apple"
         />

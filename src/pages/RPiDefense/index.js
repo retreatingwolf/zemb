@@ -236,11 +236,11 @@ const RPiDefense = () => {
           </section>
           <section>
             <SecondHeader text="Others Framework"/>
-            <img src="/resources/img/rpiDefense/OthersFramework.png" width="600" alt="Others Framework"/>
+            <img src="/resources/img/rpiDefense/OthersFramework.webp" width="600" alt="Others Framework"/>
           </section>
           <section>
             <SecondHeader text="Our Framework"/>
-            <img src="/resources/img/rpiDefense/ours_framework.png" width="800" alt="Our Framework"/>
+            <img src="/resources/img/rpiDefense/ours_framework.webp" width="800" alt="Our Framework"/>
           </section>
         </section>
 
@@ -251,7 +251,7 @@ const RPiDefense = () => {
           <section>
             <SecondHeader text="Circuit Connection"/>
             <img
-              src="/resources/img/rpiDefense/circuit.png"
+              src="/resources/img/rpiDefense/circuit.webp"
               style={{width: "700px"}}
               alt="Circuit Connection"/>
           </section>
@@ -291,7 +291,7 @@ const RPiDefense = () => {
             />
             <img
               className="fragment"
-              src="/resources/img/rpiDefense/easykey.jpg"
+              src="/resources/img/rpiDefense/easykey.webp"
               alt="easykey"
               style={{width: "500px"}}
             />
@@ -300,7 +300,7 @@ const RPiDefense = () => {
           <section>
             <SecondHeader text="Synthesizer"/>
             <img
-              src="/resources/img/rpiDefense/SynthFlow.png"
+              src="/resources/img/rpiDefense/SynthFlow.webp"
               style={{width: "700px"}}
               alt="Synthesizer"/>
           </section>
@@ -309,7 +309,7 @@ const RPiDefense = () => {
             <ThirdHeader text="How to detect simultaneous key presses?"/>
             <img
               className="fragment"
-              src="/resources/img/rpiDefense/ChordFramework.png"
+              src="/resources/img/rpiDefense/ChordFramework.webp"
               style={{width: "950px"}}
               alt="Chord"
             />
@@ -317,13 +317,13 @@ const RPiDefense = () => {
           <section>
             <SecondHeader text="Timbres"/>
             <img
-              src="/resources/img/rpiDefense/TimbreRealization.png"
+              src="/resources/img/rpiDefense/TimbreRealization.webp"
               style={{width: "800px", marginTop:"-15px", marginBottom:"0px"}}
               alt="Timbres"
             />
             <img
               className="fragment"
-              src="/resources/img/rpiDefense/ClassInheritance.png"
+              src="/resources/img/rpiDefense/ClassInheritance.webp"
               style={{width: "800px", marginTop:"-0px"}}
               alt="ClassInheritance"
             />
@@ -331,7 +331,7 @@ const RPiDefense = () => {
           <section>
             <SecondHeader text="Karplus-Strong"/>
             <img
-              src="/resources/img/rpiDefense/KarplusStrong.png"
+              src="/resources/img/rpiDefense/KarplusStrong.webp"
               style={{width: "800px"}}
               alt="Karplus Strong"
             />
@@ -340,14 +340,14 @@ const RPiDefense = () => {
           <section>
             <SecondHeader text="Wave Visualization"/>
             <img
-              src="/resources/img/rpiDefense/WaveVisualization.png"
+              src="/resources/img/rpiDefense/WaveVisualization.webp"
               style={{width: "900px"}}
               alt="Wave Visualization"/>
           </section>
           <section>
             <SecondHeader text="UI Design"/>
             <img
-              src="/resources/img/rpiDefense/UIDesign.png"
+              src="/resources/img/rpiDefense/UIDesign.webp"
               style={{width: "600px"}}
               alt="UI Design"/>
           </section>
@@ -404,7 +404,7 @@ const RPiDefense = () => {
           <section>
             <FirstHeader text="End." />
             <img
-              src="/resources/img/rpiDefense/tux-source.jpg"
+              src="/resources/img/rpiDefense/tux-source.webp"
               alt="tux-source"
               style={{width: "500px"}}
             />
