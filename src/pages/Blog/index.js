@@ -11,6 +11,10 @@ const Blog = () => {
         <h1>Zhou Hang's Blog (TODO)</h1>
       </div>
 
+      <Button size="large" onClick={() => {navigate('/');}}>
+        个人简历
+      </Button><br/>
+
       <Button size="large" onClick={() => {navigate('/blog/ne-defense');}}>
         计网工实习结题报告
       </Button><br/>
@@ -21,6 +25,10 @@ const Blog = () => {
 
       <Button size="large" onClick={() => {navigate('/blog/rpi-defense');}}>
         嵌入式项目结题报告
+      </Button><br/>
+
+      <Button size="large" onClick={() => {navigate('/blog/music-frontend');}}>
+        嵌入式课程项目前端
       </Button><br/>
 
       <Button size="large" onClick={() => {navigate('/blog/setting');}}>

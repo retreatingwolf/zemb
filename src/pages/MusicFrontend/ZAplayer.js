@@ -1,6 +1,6 @@
 import {Button} from "@douyinfe/semi-ui";
 import {IconPause, IconPlay, IconStop} from "@douyinfe/semi-icons";
-import "./RPi.css"
+import "./index.scss"
 
 const ZAplayer = ({audio}) => {
     const audioTune = new Audio(audio[0].url);

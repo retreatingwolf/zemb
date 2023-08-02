@@ -1,26 +1,27 @@
-.home-container {
+.cv-container {
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
   /*text-align: center;*/
   margin-left: 3%;
   margin-top: 2%;
-  font-family: "Times New Roman", "华文中宋", serif;
-  width: 650px;
-  font-size: 18px;
+  font-family: "console", "华文中宋", serif;
+  width: 790px;
+  font-size: 22px;
   /*border: red solid 3px;*/
 
   h1 {
-    font-size: 40px;
+    font-size: 45px;
     margin: 0 0 10px;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 30px;
     margin: 10px 0 0;
   }
 
   h3 {
+    font-size: 25px;
     margin: 10px 0 0;
   }
 
@@ -84,13 +85,14 @@
     text-align: center;
     font-size: 19px;
     font-weight: bold;
-    line-height: 40px;
+    margin-top: 15px;
   }
 
   .project-description {
-    /*border: red solid 2px;*/
     margin: 0;
     padding: 0;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .subprojects {
@@ -99,7 +101,6 @@
 
   /* ===================== 发表论文 ===================== */
   .publication {
-    font-size: 20px;
   }
 
   .publication-description {
