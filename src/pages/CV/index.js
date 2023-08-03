@@ -151,7 +151,7 @@ const CV = () => {
         </ul>
       </div>
       <footer>
-        <p>Last Update: August 2, 2023</p>
+        <p>Last Update: August 3, 2023</p>
       </footer>
     </div>
   )
