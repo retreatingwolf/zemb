@@ -24,6 +24,7 @@ const Setting = () => {
       <Button size="large" onClick={switchMode}>
         切换主题
       </Button>
+
       <Text
         link={{ href: 'https://gitee.com/zhouzhoukang/zemb' }}
         icon={<IconLink />}

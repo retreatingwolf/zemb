@@ -1,40 +1,118 @@
 .blog-container {
-  margin-left: 3%;
-}
-
-
-/* ============ apple ================ */
-.apple-logo {
-  width: 300px;
-  /*border: solid red 2px;*/
-  margin: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .apple-logo {
-    animation: apple-logo-spin infinite 20s linear;
-  }
-}
-
-.apple-container {
-  /*background-color: #282c34;*/
-  /*min-height: 50vh;*/
   display: flex;
-  /*flex-direction: column;*/
-  /*设置item在交叉轴上如何对齐*/
-  align-items: center;
-  /*设置item在主轴上如何对齐*/
-  /*justify-content: center;*/
-  /*font-size: calc(10px + 2vmin);*/
-  /*color: white;*/
+  flex-direction: column;
 }
 
-@keyframes apple-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title-container {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #4169E1, #1E90FF, white);
+  box-shadow: 0 0 5px 1px #999;
+
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .blog-title {
+    color: white;
+    font-family: "Consolas", 华文中宋, sans-serif;
+    font-size: 130%;
+    margin: 0.5% 0 0.5% 2%;
+
+    display: inline-block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .title-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .theme-button {
+    margin-top: 0.3%;
+    font-family: Consolas, 华文中宋, sans-serif;
+    height: 100%;
+    vertical-align: middle;
   }
 }
 
+.content-container {
+  width: 65%;
+  margin: auto;
+  padding: 2% 3% 3% 3%;
+  //border: gray solid 1px;
+  box-shadow: 0 0 5px 1px #999;
+
+  .content-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+    h1 {
+      font-size: 200%;
+      font-family: Consolas, 华文中宋, serif;
+      margin-top: 40px;
+    }
+
+    /* ============ apple ================ */
+    .apple-logo {
+      width: 37px;
+      margin: 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .apple-logo {
+        animation: apple-logo-spin infinite 20s linear;
+      }
+    }
+
+    .apple-container {
+      height: 100%;
+      margin-top: 40px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+    }
+
+    @keyframes apple-logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .note-container {
+      //box-shadow: 0 0 2px 1px #999;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .ppt-container {
+      //box-shadow: 0 0 2px 1px #999;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .project-container {
+      //box-shadow: 0 0 2px 1px #999;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+  }
+}
+
+.footer-container {
+  margin: 2%;
+  color: gray;
+  text-align: center;
+}
