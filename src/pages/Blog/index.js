@@ -1,7 +1,8 @@
 import {Button} from "@douyinfe/semi-ui";
 import { useNavigate } from 'react-router-dom'
-import "./index.scss"
 import {IconCode, IconHome, IconSort} from "@douyinfe/semi-icons";
+import React from "react";
+import "./index.scss"
 
 const Blog = () => {
   const navigate = useNavigate();

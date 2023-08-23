@@ -1,6 +1,6 @@
 import React from "react";
 import Reveal from "reveal.js";
-import 'reveal.js/dist/reveal.css';
+// import 'reveal.js/dist/reveal.css';
 import {Table} from "@douyinfe/semi-ui";
 
 import {FirstHeader, MainSlide, SecondHeader, ThirdHeader} from "../../component/ppt/PPTComponents";

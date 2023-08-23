@@ -1,6 +1,4 @@
-
 body {
-
   color: var(--semi-color-text-0);
   background-color: rgba(var(--semi-grey-1), 1);
 
@@ -9,8 +7,8 @@ body {
   margin: 0;
 
   font-family: Consolas, 华文中宋, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   /*!*防止iphone转横屏时放大文字, webkit是safari浏览器内核*!*/
   -webkit-font-smoothing: antialiased;
   /*!*可能是用于适配火狐浏览器?*!*/
@@ -23,10 +21,13 @@ body {
       height: 100%;
     }
   }
-
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+img {
+  // 不允许图片拖动
+  -webkit-user-drag: none;
+}
