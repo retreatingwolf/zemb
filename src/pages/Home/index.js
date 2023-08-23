@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from 'react-router-dom'
 import {Button} from "@douyinfe/semi-ui";
-import {IconCode, IconHome, IconSort} from "@douyinfe/semi-icons";
+import {IconCode, IconFolderOpen, IconHome, IconSort} from "@douyinfe/semi-icons";
 import React from "react";
 import "./index.scss"
 
@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   return(
-    <div>
+    <div className="home-container">
       {/*顶部导航栏*/}
       <div className="title-container">
         <p className="blog-title">zzk's Blog</p>
@@ -28,6 +28,11 @@ const Home = () => {
           <Button theme="borderless" icon={<IconHome/>} size="large" onClick={() => {navigate('/');}}
                   className="theme-button">
             个人简历
+          </Button><br/>
+
+          <Button theme="borderless" icon={<IconFolderOpen/>} size="large" onClick={() => {navigate('/blog');}}
+                  className="theme-button">
+            Blog
           </Button><br/>
 
           <Button theme="borderless" icon={<IconCode/>} onClick={()=>window.open("https://gitee.com/zhouzhoukang/")}
@@ -45,8 +50,8 @@ const Home = () => {
 
       {/*底部信息栏目*/}
       <div className="footer-container">
-        Last Update: 2023-08-23 <br/>
-        <a href="http://beian.miit.gov.cn/" target="_blank" rel="noreferrer">苏ICP备2023026750号</a>
+        <span>Last Update: 2023-08-23</span>
+        <a className="beian-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer"> 苏ICP备2023026750号</a>
       </div>
     </div>
   )

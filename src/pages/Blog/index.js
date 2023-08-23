@@ -1,44 +1,14 @@
 import {Button} from "@douyinfe/semi-ui";
 import { useNavigate } from 'react-router-dom'
-import {IconCode, IconHome, IconSort} from "@douyinfe/semi-icons";
+import {IconHome} from "@douyinfe/semi-icons";
 import React from "react";
 import "./index.scss"
 
 const Blog = () => {
   const navigate = useNavigate();
 
-  const switchMode = () => {
-    const body = document.body;
-    // const ppt = document.getElementById()
-    if (body.hasAttribute('theme-mode')) {
-      body.removeAttribute('theme-mode');
-    } else {
-      body.setAttribute('theme-mode', 'dark');
-    }
-  };
-
   return (
     <div className="blog-container">
-      {/*顶部导航栏*/}
-      <div className="title-container">
-        <p className="blog-title">zzk's Blog</p>
-
-        <div className="title-buttons">
-          <Button theme="borderless" icon={<IconHome/>} size="large" onClick={() => {navigate('/');}}
-                  className="theme-button">
-            个人简历
-          </Button><br/>
-
-          <Button theme="borderless" icon={<IconCode/>} onClick={()=>window.open("https://gitee.com/zhouzhoukang/zemb")}
-                  className="theme-button">
-            Gitee
-          </Button>
-
-          <Button theme="borderless" icon={<IconSort/>} onClick={switchMode} className="theme-button">
-            切换主题
-          </Button>
-        </div>
-      </div>
 
       {/*主要内容*/}
       <div className="content-container">

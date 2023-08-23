@@ -1,11 +1,12 @@
 import React from "react";
 import Reveal from "reveal.js";
-import 'reveal.js/dist/reveal.css';
+
+// import 'reveal.js/dist/reveal.css';
 // import 'reveal.js/dist/theme/white.css';
 
 import {FirstHeader, MainSlide, SecondHeader, ThirdHeader} from "../../component/ppt/PPTComponents";
 import './index.scss';
-import "../NEDefense/PPTGeneral.scss"
+import "../../assets/styles/PPTGeneral.scss"
 
 import {Table} from "@douyinfe/semi-ui";
 

@@ -2,10 +2,10 @@ import React from "react";
 import Reveal from "reveal.js";
 // import 'reveal.js/dist/reveal.css';
 import {Table} from "@douyinfe/semi-ui";
-
 import {FirstHeader, MainSlide, SecondHeader, ThirdHeader} from "../../component/ppt/PPTComponents";
+import "../../assets/styles/PPTGeneral.scss"
 import "./index.scss"
-import "../NEDefense/PPTGeneral.scss"
+
 const RPiDefense = () => {
   React.useEffect(() => {
     let deck = new Reveal({

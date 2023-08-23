@@ -12,7 +12,7 @@ const CV_En = () => {
         />
         <div className="basic-info">
           <h1>周航 (Zhou Hang)</h1>
-          <div className="basic-info-intern">Nanjing Forestry University, Junior</div>
+          <div className="basic-info-intern">Nanjing Forestry University, Senior</div>
           <div className="basic-info-intern">Computer Science</div>
           <div className="basic-info-intern">hangzhou@njfu.edu.cn</div>
           <div className="basic-info-intern">

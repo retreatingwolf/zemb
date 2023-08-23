@@ -1,81 +1,77 @@
 .blog-container {
   display: flex;
   flex-direction: column;
-}
+  height: 100%;
 
+  .content-container {
+    width: 65%;
+    margin: auto;
+    padding: 2% 3% 3% 3%;
+    //border: gray solid 1px;
+    box-shadow: 0 0 5px 1px #999;
 
-
-.content-container {
-  width: 65%;
-  margin: auto;
-  padding: 2% 3% 3% 3%;
-  //border: gray solid 1px;
-  box-shadow: 0 0 5px 1px #999;
-
-  .content-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-
-    h1 {
-      font-size: 200%;
-      font-family: Consolas, 华文中宋, serif;
-      margin-top: 40px;
-    }
-
-    /* ============ apple ================ */
-    .apple-logo {
-      width: 37px;
-      margin: 0;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .apple-logo {
-        animation: apple-logo-spin infinite 20s linear;
-      }
-    }
-
-    .apple-container {
-      height: 100%;
-      margin-top: 40px;
-      z-index: 2;
+    .content-title {
       display: flex;
-      align-items: center;
-    }
+      flex-direction: row;
+      justify-content: left;
 
-    @keyframes apple-logo-spin {
-      from {
-        transform: rotate(0deg);
+      h1 {
+        font-size: 200%;
+        margin-top: 40px;
       }
-      to {
-        transform: rotate(360deg);
+
+      /* ============ apple ================ */
+      .apple-logo {
+        width: 37px;
+        margin: 0;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .apple-logo {
+          animation: apple-logo-spin infinite 20s linear;
+        }
+      }
+
+      .apple-container {
+        height: 100%;
+        margin-top: 40px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+      }
+
+      @keyframes apple-logo-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
     }
-  }
 
-  .contents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .contents {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-    .note-container {
-      //box-shadow: 0 0 2px 1px #999;
-      margin-bottom: 20px;
-      padding: 10px;
-    }
+      .note-container {
+        //box-shadow: 0 0 2px 1px #999;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
 
-    .ppt-container {
-      //box-shadow: 0 0 2px 1px #999;
-      margin-bottom: 20px;
-      padding: 10px;
-    }
+      .ppt-container {
+        //box-shadow: 0 0 2px 1px #999;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
 
-    .project-container {
-      //box-shadow: 0 0 2px 1px #999;
-      margin-bottom: 20px;
-      padding: 10px;
+      .project-container {
+        //box-shadow: 0 0 2px 1px #999;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
     }
   }
 }
-
-

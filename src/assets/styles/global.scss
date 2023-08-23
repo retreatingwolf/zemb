@@ -13,7 +13,8 @@ body {
   -webkit-font-smoothing: antialiased;
   /*!*可能是用于适配火狐浏览器?*!*/
   -moz-osx-font-smoothing: grayscale;
-
+  // 取消文字的选中
+  //user-select: none;
   // 这两个 height 100% 必须都要有，否则无法显示ppt
   #root {
     height: 100%;
@@ -30,4 +31,13 @@ code {
 img {
   // 不允许图片拖动
   -webkit-user-drag: none;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  //margin: ;
+}
+
+b {
+  font-weight: bold;
 }

@@ -7,7 +7,7 @@ import "reset-css"
 // 全局样式
 import './assets/styles/global.scss'
 // 特殊组件样式
-import 'reveal.js/dist/reveal.css';  // 这里导入了在ppt中就不用导入了
+import 'reveal.js/dist/reveal.css';
 
 import App from './App';
 import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom'

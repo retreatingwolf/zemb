@@ -1,13 +1,13 @@
 import React from "react";
 import Reveal from 'reveal.js';
 
-import 'reveal.js/dist/reveal.css';
+// import 'reveal.js/dist/reveal.css';
 // import 'reveal.js/dist/theme/white.css';
 // import 'reveal.js/dist/theme/black.css';
 
-import "./PPTGeneral.scss"
 import { Table } from '@douyinfe/semi-ui';
 import { FirstHeader, MainSlide, SecondHeader, ThirdHeader, ThirdHeaderLink } from "../../component/ppt/PPTComponents";
+import "../../assets/styles/PPTGeneral.scss"
 
 const NEDefense = () => {
   React.useEffect(() => {

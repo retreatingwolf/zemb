@@ -1,47 +1,53 @@
+$cv-width: 800px;
+$tab-width: 15px;
+
 .cv-container {
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
-  /*text-align: center;*/
-  margin-left: 3%;
-  margin-top: 2%;
-  font-family: "console", "华文中宋", serif;
-  width: 790px;
+  margin: 2% 3% 3%;
+  width: $cv-width;
   font-size: 22px;
-  /*border: red solid 3px;*/
+  padding-top: 2%;  // 避开导航栏
 
   h1 {
-    font-size: 45px;
-    margin: 0 0 10px;
+    font-size: 46px;
+    margin: 0 0 12px;
   }
 
   h2 {
     font-size: 30px;
-    margin: 10px 0 0;
+    margin: 25px 0 10px;
   }
 
   h3 {
     font-size: 25px;
-    margin: 10px 0 0;
+    margin: 5px 0;
   }
 
   h4 {
+    font-weight: bold;
     margin: 10px 0 0;
   }
 
   a {
     text-decoration: none;
-    color: #1E90FF;
+    color: rgba(var(--semi-light-blue-5), 1);
     //transition: color 1s ease;
   }
 
   a:hover {
-    color: #4169E1;
+    color: rgba(var(--semi-light-blue-7), 1);
     text-decoration: underline;
   }
 
   ul {
-    margin-top: 2px;
+    margin-top: 0;
+    list-style-type: circle;
+    list-style-position: inside;
+
+    li {
+      margin: 10px 0;
+    }
   }
 
   /* ===================== 基本信息 ===================== */
@@ -52,6 +58,7 @@
 
   .profile-photo-img {
     width: 150px;
+    border-radius: 4px;
   }
 
   .basic-info {
@@ -61,7 +68,7 @@
   .basic-info-intern {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   /* ===================== 教育背景 ===================== */
@@ -72,7 +79,7 @@
 
   /* ===================== 项目经历 ===================== */
   .project {
-    margin-left: 10px;
+    margin-left: $tab-width;
     margin-bottom: 10px;
   }
 
@@ -97,11 +104,12 @@
   }
 
   .subprojects {
-    margin-left: 10px;
+    margin-left: $tab-width;
   }
 
   /* ===================== 发表论文 ===================== */
   .publication {
+    margin-left: $tab-width;
   }
 
   .publication-description {
