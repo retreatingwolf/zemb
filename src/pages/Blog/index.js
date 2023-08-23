@@ -86,11 +86,6 @@ const Blog = () => {
 
         </div>
       </div>
-
-      {/*页脚部分*/}
-      <div className="footer-container">
-        Last Update: 2023-08-06
-      </div>
     </div>
   )
 }

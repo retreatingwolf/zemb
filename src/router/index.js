@@ -6,6 +6,7 @@ import {Navigate} from "react-router-dom"
 import './index.scss'
 
 // 按需导入组件
+const Home = lazy(() => import('../pages/Home'))
 const CV = lazy(() => import('../pages/CV'))
 const CVEn = lazy(() => import('../pages/CV-En'))
 const Blog = lazy(() => import('../pages/Blog'))
@@ -33,37 +34,44 @@ const routes = [
         element: <Navigate to="/cv"/>
     },
     {
-        path: "/cv",
-        element: withLoadingComponents(<CV/>)
-    },
-    {
-        path: "/cv-en",
-        element: withLoadingComponents(<CVEn/>)
-    },
-    {
-        path: "/blog",
-        element: withLoadingComponents(<Blog/>),
-    },
-    {
-        path: "/blog/ne-defense",
-        element: withLoadingComponents(<NEDefense/>),
-    },
-    {
-        path: "/blog/rpi-open",
-        element: withLoadingComponents(<RPiOpen/>),
-    },
-    {
-        path: "/blog/rpi-defense",
-        element: withLoadingComponents(<RPiDefense/>),
-    },
-    {
-        path: "/blog/setting",
-        element: withLoadingComponents(<Setting/>),
-    },
-    {
-        path: "/blog/music-frontend",
-        element: withLoadingComponents(<MusicFrontend/>),
+        path: "/",
+        element: withLoadingComponents(<Home/>),
+        children: [
+            {
+                path: "/cv",
+                element: withLoadingComponents(<CV/>)
+            },
+            {
+                path: "/cv-en",
+                element: withLoadingComponents(<CVEn/>)
+            },
+            {
+                path: "/blog",
+                element: withLoadingComponents(<Blog/>)
+            },
+            {
+                path: "/blog/ne-defense",
+                element: withLoadingComponents(<NEDefense/>)
+            },
+            {
+                path: "/blog/rpi-open",
+                element: withLoadingComponents(<RPiOpen/>)
+            },
+            {
+                path: "/blog/rpi-defense",
+                element: withLoadingComponents(<RPiDefense/>)
+            },
+            {
+                path: "/blog/setting",
+                element: withLoadingComponents(<Setting/>)
+            },
+            {
+                path: "/blog/music-frontend",
+                element: withLoadingComponents(<MusicFrontend/>)
+            }
+        ]
     }
+
 ]
 
 export default routes

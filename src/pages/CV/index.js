@@ -10,44 +10,9 @@ import {useNavigate} from "react-router-dom";
 // https://blog.jm233333.com/cv/zh-cn/
 
 const CV = () => {
-  const navigate = useNavigate();
-
-
-  // 切换主题色
-  const switchMode = () => {
-    const body = document.body;
-    // const ppt = document.getElementById()
-    if (body.hasAttribute('theme-mode')) {
-      body.removeAttribute('theme-mode');
-    } else {
-      body.setAttribute('theme-mode', 'dark');
-    }
-  };
 
   return (
     <div className="cv-container">
-
-      {/*顶部导航栏*/}
-      <div className="title-container">
-        <p className="blog-title">zzk's Blog</p>
-
-        <div className="title-buttons">
-          <Button theme="borderless" icon={<IconHome/>} size="large" onClick={() => {navigate('/');}}
-                  className="theme-button">
-            个人简历
-          </Button><br/>
-
-          <Button theme="borderless" icon={<IconCode/>} onClick={()=>window.open("https://gitee.com/zhouzhoukang/zemb")}
-                  className="theme-button">
-            Gitee
-          </Button>
-
-          <Button theme="borderless" icon={<IconSort/>} onClick={switchMode} className="theme-button">
-            切换主题
-          </Button>
-        </div>
-      </div>
-
       <div className="basic-info-container">
         <img
           className="profile-photo-img"
@@ -192,10 +157,7 @@ const CV = () => {
         </ul>
       </div>
 
-      {/*底部信息栏目*/}
-      <footer>
-        <p>Last Update: August 3, 2023</p>
-      </footer>
+
     </div>
   )
 }

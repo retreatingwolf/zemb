@@ -110,41 +110,4 @@
   }
 }
 
-// TODO
-.title-container {
-  margin: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: linear-gradient(to right, rgba(var(--semi-light-blue-9), 1), rgba(var(--semi-light-blue-5), 1), rgba(var(--semi-blue-2), 1), rgba(var(--semi-light-blue-0), 1));
-  box-shadow: 0 0 5px 1px #999;
 
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .blog-title {
-    color: rgba(var(--semi-grey-0), 1);
-    font-family: "Consolas", 华文中宋, sans-serif;
-    font-size: 130%;
-    font-weight: bold;
-    margin: 0.5% 0 0.5% 2%;
-
-    display: inline-block;
-  }
-
-  .title-buttons {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .theme-button {
-    margin-top: 0.3%;
-    font-family: 华文中宋, 宋体, sans-serif;
-    height: 100%;
-
-    vertical-align: middle;
-    color: rgba(var(--semi-grey-9), 1);
-  }
-}
