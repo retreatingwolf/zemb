@@ -1,8 +1,9 @@
 import React, {lazy} from "react"
 import {Navigate} from "react-router-dom"
+// 统一管理路由
 
 // TODO： webpack 默认不支持模块引入，暂时先尽可能确保类名不重复吧
-import './index.module.scss'
+import './index.scss'
 
 // 按需导入组件
 const CV = lazy(() => import('../pages/CV'))
