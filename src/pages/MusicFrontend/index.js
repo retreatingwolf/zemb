@@ -17,16 +17,12 @@ const MusicFrontend = () => {
   useEffect(() => {
     audioService.getAll()
       .then(response => {
-        // console.log(typeof (response.data))
-        // console.log(response.data)
         setAudioList(response.data)
       })
   }, [])
 
+  // 选择一个音频
   const choose_one_audio = (record) => {
-    // 选择一个音频在下面播放
-    // console.log(record.name)
-    // console.log(record.url)
     const new_audio = {
       name: record.name,
       artist: 'Yourself',
@@ -67,7 +63,6 @@ const MusicFrontend = () => {
       )
     }
   ];
-  // console.log(audio)
 
   const { Title } = Typography;
   return (
