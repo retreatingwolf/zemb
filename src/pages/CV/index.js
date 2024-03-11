@@ -2,7 +2,7 @@ import "./index.scss"
 import React from "react";
 // 个人简历
 
-// 参考
+// UI参考
 // https://abcdabcd987.com/about/
 // https://blog.jm233333.com/cv/zh-cn/
 
@@ -37,7 +37,7 @@ const CV = () => {
       <div className="education-background-container">
         <h2>教育背景</h2>
         <ul>
-          <li>2020.09 - 今: 大三在读，南京林业大学，计算机科学与技术</li>
+          <li>2020.09 - 今: 大四在读，南京林业大学，计算机科学与技术</li>
           <li>2017.09 - 2020.07: 高中，江苏省天一中学</li>
         </ul>
       </div>
@@ -45,9 +45,8 @@ const CV = () => {
       <div className="interest-container">
         <h2>个人兴趣</h2>
         <ul>
-          <li>语言：Python、C/C++、Java、JavaScript、RISC-V、ANTLR4、Coq ……</li>
-          <li>方向：编译原理、操作系统、软件验证、体系结构 ……</li>
-          <li>Linux Tool Chain</li>
+          <li>语言：Python、Java、C/C++、Linux、RISC-V、Coq ……</li>
+          <li>方向：软件分析、编译原理、操作系统、体系结构 ……</li>
         </ul>
       </div>
 
@@ -56,11 +55,11 @@ const CV = () => {
         <div className="projects">
           <div className="project">
             <div className="project-name">
-              <h3><a href="https://gitee.com/zhouzhoukang/zre">通用的编译器前端设计</a></h3>
+              <h3><a href="https://gitee.com/zhouzhoukang/zre">通用编译器前端设计</a></h3>
               <div className="project-time">2022.10 - 2022.12</div>
             </div>
             <div className="project-descriptions">
-              <span className="project-description">实现包含正则引擎，词法分析，LL(1) 分析，算符优先分析，SLR(1) 分析的工具，并包含强大的可视化界面，将分析细节可视化。</span>
+              <span className="project-description">实现一个包括正则引擎，词法分析器，语法分析器 (LL(1)，算符优先，SLR(1)) 的编译器前端，实现语法分析过程可视化。</span>
             </div>
           </div>
 
@@ -80,7 +79,7 @@ const CV = () => {
               <div className="project-time">2023.04 - 2023.05</div>
             </div>
             <div className="project-descriptions">
-              <span className="project-description">基于信号系统，音色生成，音频的数字化存储等理论，实现了包含六种音色的合成器，并移植到树莓派平台。实现部分 MIDI 协议，开发并部署了一套 Web 端服务，提供演奏录音上传云端功能。</span>
+              <span className="project-description">基于信号系统，音色生成，音频数字化存储等理论，实现了包含六种音色的合成器，并移植到树莓派平台。实现部分 MIDI 协议，开发并部署了一套 Web 端服务，提供演奏录音上传云端功能。</span>
             </div>
           </div>
 
@@ -147,8 +146,8 @@ const CV = () => {
         <h2>证书奖项</h2>
         <ul>
           <li>蓝桥杯软件和信息技术全国总决赛C/C++程序设计大学B组三等奖 2023.06</li>
-          <li>全国大学生英语竞赛(NECCS)三等奖 2021.05</li>
-          <li>南京林业大学一等奖学金 2022.11</li>
+          <li>全国大学生英语竞赛 (NECCS)三等奖 2021.05</li>
+          <li>南京林业大学奖学金 (3次)</li>
           <li>CET-4(580) CET-6(533)</li>
         </ul>
       </div>

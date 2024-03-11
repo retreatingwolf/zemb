@@ -1,7 +1,7 @@
-import {Button} from "@douyinfe/semi-ui";
-import { useNavigate } from 'react-router-dom'
-import {IconHome} from "@douyinfe/semi-icons";
 import React from "react";
+import { Button } from "@douyinfe/semi-ui";
+import { IconHome } from "@douyinfe/semi-icons";
+import { useNavigate } from 'react-router-dom'
 import "./index.scss"
 
 const Blog = () => {
@@ -28,6 +28,9 @@ const Blog = () => {
             <Button icon={<IconHome/>} size="large" onClick={() => {navigate('/');}}>
               个人简历
             </Button><br/>
+            <Button onClick={()=>navigate("/resources/notes/1-StartUp.md")}>
+              笔记
+            </Button>
           </div>
 
           <div className="ppt-container">

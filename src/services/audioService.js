@@ -1,9 +1,7 @@
 import axios from "axios";
-const baseUrl = 'http://47.100.107.53:10180/audio'
-// const baseUrl = 'http://localhost:10180/audio'
-
+import { baseUrl, port, audioApp } from "./common"
 const getAll = () => {
-    return axios.get(`${baseUrl}/getAll`)
+    return axios.get(`${baseUrl}:${port}${audioApp}/getAll`)
 }
 
 const deleteAudio = (filename) => {
@@ -13,5 +11,5 @@ const deleteAudio = (filename) => {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     getAll: getAll,
-    deleteAudio: deleteAudio()
+    deleteAudio: deleteAudio
 }
