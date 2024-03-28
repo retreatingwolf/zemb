@@ -111,7 +111,7 @@ const CV = () => {
                 <span className="project-description">为<a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">OSTEP</a>书涉及的所有模拟器制作的一系列可视化界面。</span>
               </div>
 
-              <h4><a href="https://gitee.com/zhouzhoukang/ztips">ZTips桌面标签</a></h4>
+              <h4><a href="https://gitee.com/zhouzhoukang/ztips">ZTips 桌面标签</a></h4>
               <div className="project-descriptions">
                 <span className="project-description">支持 markdown 的轻量级桌面便签应用，可以悬浮在桌面上方，随时记录个人灵感。</span>
               </div>

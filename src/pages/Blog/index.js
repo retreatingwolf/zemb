@@ -52,6 +52,10 @@ const Blog = () => {
               嵌入式课程项目前端
             </Button><br/>
 
+            <Button size="large" onClick={() => {navigate('/blog/a11y-frontend');}}>
+              静态无障碍分析工具
+            </Button><br/>
+
             <Button size="large" onClick={() => {navigate('/blog/setting');}}>
               设置
             </Button><br/>

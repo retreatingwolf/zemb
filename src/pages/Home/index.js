@@ -46,11 +46,14 @@ const Home = () => {
         </div>
       </div>
 
-      <Outlet/>
+      {/*内容部分*/}
+      <div className="content-container">
+        <Outlet/>
+      </div>
 
       {/*底部信息栏目*/}
       <div className="footer-container">
-        <span>Last Update: 2024-03-11</span>
+        <span>Last Update: 2024-03-28</span>
         <a className="beian-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer"> 苏ICP备2023026750号</a>
       </div>
     </div>

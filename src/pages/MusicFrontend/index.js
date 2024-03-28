@@ -3,7 +3,7 @@ import {Button, Table} from "@douyinfe/semi-ui";
 import { IconDelete, IconReply } from "@douyinfe/semi-icons";
 import { Typography } from '@douyinfe/semi-ui';
 import ZAplayer from "./ZAplayer";
-import audioService from "../../services/audioService";
+import audioService from "../../services/AudioService";
 import "./index.scss"
 
 const MusicFrontend = () => {

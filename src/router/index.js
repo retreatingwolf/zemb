@@ -16,6 +16,7 @@ const RPiDefense = lazy(() => import('../pages/RPiDefense'))
 const Setting = lazy(() => import('../pages/Setting'))
 const MusicFrontend = lazy(() => import('../pages/MusicFrontend'))
 const NotesShow = lazy(() => import('../pages/NotesShow'))
+const A11yFrontend = lazy(() => import('../pages/A11yFrontend'))
 
 const withLoadingComponents = (comp) => (
     <React.Suspense fallback={
@@ -74,6 +75,10 @@ const routes = [
                 path: "/blog/show",
                 element: withLoadingComponents(<NotesShow/>)
             },
+            {
+                path: "/blog/a11y-frontend",
+                element: withLoadingComponents(<A11yFrontend/>)
+            }
         ]
     }
 

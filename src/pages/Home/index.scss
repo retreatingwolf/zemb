@@ -1,13 +1,16 @@
 .home-container {
   font-family: "Consolas", 华文中宋, sans-serif;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .title-container {
     margin: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, rgba(var(--semi-light-blue-9), 1), rgba(var(--semi-light-blue-5), 1), rgba(var(--semi-blue-2), 1), rgba(var(--semi-light-blue-0), 1));
+    background: linear-gradient(to right, rgba(var(--semi-light-blue-7), 1), rgba(var(--semi-light-blue-5), 1), rgba(var(--semi-blue-2), 1), rgba(var(--semi-light-blue-1), 1));
     box-shadow: 0 0 5px 1px #999;
 
     z-index: 1;
@@ -20,7 +23,6 @@
       font-size: 130%;
       font-weight: bold;
       margin: 0.5% 0 0.5% 2%;
-
       display: inline-block;
     }
 
@@ -37,6 +39,9 @@
         color: rgba(var(--semi-grey-9), 1);
       }
     }
+  }
+
+  .content-container {
   }
 
   .footer-container {
