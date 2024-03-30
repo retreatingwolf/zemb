@@ -1,7 +1,8 @@
-import {Button, Checkbox, CheckboxGroup, Modal, Upload} from "@douyinfe/semi-ui";
+import {Button, Checkbox, CheckboxGroup, Input, Modal, Toast, Upload} from "@douyinfe/semi-ui";
 import "./index.scss"
 import {IconApps, IconBolt, IconFile} from "@douyinfe/semi-icons";
 import {useState} from "react";
+import axios from "axios";
 
 const A11yFrontend = () => {
   // 配置对话框是否开启
@@ -10,10 +11,9 @@ const A11yFrontend = () => {
   /**
    * 打开配置对话框
    * */
-  const showDialog = () => {
+  const show_dialog = () => {
     setVisible(true);
   };
-
   /**
    * 配置修改完成，关闭配置对话框
    * */
@@ -25,6 +25,7 @@ const A11yFrontend = () => {
   }
 
   // 配置选项
+  const [username, setUsername] = useState("");
   const [src, setSrc] = useState(false);  // 是否开启源码分析
   const [verbose, setVerbose] = useState(false);  // 是否输出中间过程
   const [cdIssue, setCdIssue] = useState(true);
@@ -34,6 +35,54 @@ const A11yFrontend = () => {
   const [missingLabelIssue, setMissingLabelIssue] = useState(true);
   const [misuseIssue, setMisuseIssue] = useState(true);
 
+  const baseurl = "http://127.0.0.1:10180"
+  const upload_apk_action = "http://127.0.0.1:10180/api/upload/apk"
+  /**
+   * 开始分析
+   * */
+  const start_analysis = () => {
+    if (username === '') {
+      Toast.warning("请输入一个 username");
+    }
+    axios.post(`${baseurl}/api/xfinder/start_analysis`, {
+      username: username,
+      src: src ? 1 : 0,
+      verbose: verbose ? 1 : 0,
+      cdIssue: cdIssue ? 1 : 0,
+      colorIssue: colorIssue ? 1 : 0,
+      disabledIssue: disabledIssue ? 1 : 0,
+      inaccessIssue: inaccessIssue ? 1 : 0,
+      missingLabelIssue: missingLabelIssue ? 1 : 0,
+      misuseIssue: misuseIssue ? 1 : 0,
+    }).then(res => {
+      if (res.data.code === 2000) {
+        Toast.info("正在分析");
+      }
+    }).catch(err => {
+      Toast.info(err);
+    })
+  }
+
+  const upload_apk = ({ file, onError, onSuccess }) => {
+    if (username === '') {
+      Toast.warning("请输入一个 username");
+      onError();
+      return;
+    }
+    const form = new FormData();
+    form.append("username", username);
+    form.append("apk", file.fileInstance)  // Important
+    // axios 会自动设置 Content-Type
+    axios.post(`${baseurl}/api/upload/apk`, form)
+      .then(res => {
+        if (res.data.code === 2000) {
+          Toast.info("APK 上传成功");
+          onSuccess();
+        } else {
+          onError();
+        }
+      })
+  };
 
   return (
     <div className="a11y-container">
@@ -45,9 +94,14 @@ const A11yFrontend = () => {
 
       <div className="a11y-upload">
         <Upload
+          name="apk"
           dragIcon={<IconApps/>}
           draggable={true}
           accept=".apk"
+          limit={1}
+          maxSize={1024 * 20}
+          action={upload_apk_action}
+          customRequest={upload_apk}
         >
           <div className="components-upload-demo-drag-area">
             <img
@@ -71,10 +125,10 @@ const A11yFrontend = () => {
       </div>
 
       <div className="a11y-btn">
-        <Button size="large" icon={<IconFile />} onClick={showDialog}>
+        <Button size="large" icon={<IconFile />} onClick={show_dialog}>
           Configuration
         </Button>
-        <Button size="large" icon={<IconBolt />}>
+        <Button size="large" icon={<IconBolt />} onClick={start_analysis}>
           Start Analysis!
         </Button>
       </div>
@@ -88,6 +142,12 @@ const A11yFrontend = () => {
         okText={'搞定'}
         cancelText={'关闭'}
       >
+        <Input
+          addonBefore="用户名*"
+          showClear size="large" maxLength="20"
+          value={username} onChange={(value, e) => {
+          setUsername(value);
+        }}/>
         <CheckboxGroup direction="vertical">
           <CheckboxGroup direction="horizontal">
             <Checkbox
@@ -165,7 +225,7 @@ const A11yFrontend = () => {
               分析 MisuseIssue
             </Checkbox>
           </CheckboxGroup>
-          </CheckboxGroup>
+        </CheckboxGroup>
       </Modal>
     </div>
   );
