@@ -1,7 +1,6 @@
 import { history } from './history'
+import {config} from "./config";
 
 export {
-  history
+  history, config
 }
-
-// import {http} from '@/utils'

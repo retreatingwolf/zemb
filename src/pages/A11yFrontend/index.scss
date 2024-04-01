@@ -49,4 +49,21 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .results_container {
+    border: red 2px solid;
+    margin: 10px;
+
+    .issue-list {
+      .issue-list-item {
+        &:hover {
+          background-color: var(--semi-color-fill-0);
+        }
+        &:active {
+          background-color: var(--semi-color-fill-1);
+        }
+      }
+    }
+  }
+
 }

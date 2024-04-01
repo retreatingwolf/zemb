@@ -1,8 +1,20 @@
-import {Button, Checkbox, CheckboxGroup, Input, Modal, Toast, Upload} from "@douyinfe/semi-ui";
+import {
+  Avatar,
+  Button,
+  Checkbox,
+  CheckboxGroup,
+  Input,
+  List,
+  Modal,
+  Pagination,
+  Toast,
+  Upload
+} from "@douyinfe/semi-ui";
 import "./index.scss"
 import {IconApps, IconBolt, IconFile} from "@douyinfe/semi-icons";
 import {useState} from "react";
 import axios from "axios";
+import {config} from "../../utils";
 
 const A11yFrontend = () => {
   // 配置对话框是否开启
@@ -35,16 +47,19 @@ const A11yFrontend = () => {
   const [missingLabelIssue, setMissingLabelIssue] = useState(true);
   const [misuseIssue, setMisuseIssue] = useState(true);
 
-  const baseurl = "http://127.0.0.1:10180"
-  const upload_apk_action = "http://127.0.0.1:10180/api/upload/apk"
+  // 结果数据
+  const [apk, setApk] = useState("");
+  const [issues, setIssues] = useState([]);
+
   /**
    * 开始分析
    * */
-  const start_analysis = () => {
+  const start_analysis = (e) => {
+    e.preventDefault();
     if (username === '') {
       Toast.warning("请输入一个 username");
     }
-    axios.post(`${baseurl}/api/xfinder/start_analysis`, {
+    axios.post(`${config.baseURL}/api/xfinder/start_analysis`, {
       username: username,
       src: src ? 1 : 0,
       verbose: verbose ? 1 : 0,
@@ -61,6 +76,27 @@ const A11yFrontend = () => {
     }).catch(err => {
       Toast.info(err);
     })
+  };
+
+  const show_results = (e) => {
+    e.preventDefault();
+    if (username === '') {
+      Toast.warning("请输入一个 username");
+      return;
+    }
+    axios.post(`${config.baseURL}/api/xfinder/get_issues`, {
+      username: username
+    }).then(res => {
+      if (res.data.code === 2000) {
+        const issues_json = res.data.data
+        setApk(issues_json.name);
+        setIssues(issues_json.issues);
+      } else {
+        Toast.warning(res.data.message);
+      }
+    }).catch(err => {
+      Toast.warning(err);
+    });
   }
 
   const upload_apk = ({ file, onError, onSuccess }) => {
@@ -73,7 +109,7 @@ const A11yFrontend = () => {
     form.append("username", username);
     form.append("apk", file.fileInstance)  // Important
     // axios 会自动设置 Content-Type
-    axios.post(`${baseurl}/api/upload/apk`, form)
+    axios.post(`${config.baseURL}/api/upload/apk`, form)
       .then(res => {
         if (res.data.code === 2000) {
           Toast.info("APK 上传成功");
@@ -82,6 +118,14 @@ const A11yFrontend = () => {
           onError();
         }
       })
+  };
+
+  const [page, onPageChange] = useState(1);
+  const pageSize = 5;
+  const getData = (page) => {
+    let start = (page - 1) * pageSize;
+    let end = page * pageSize;
+    return issues.slice(start, end);
   };
 
   return (
@@ -100,7 +144,6 @@ const A11yFrontend = () => {
           accept=".apk"
           limit={1}
           maxSize={1024 * 20}
-          action={upload_apk_action}
           customRequest={upload_apk}
         >
           <div className="components-upload-demo-drag-area">
@@ -131,6 +174,9 @@ const A11yFrontend = () => {
         <Button size="large" icon={<IconBolt />} onClick={start_analysis}>
           Start Analysis!
         </Button>
+        <Button size="large" icon={<IconFile />} onClick={show_results}>
+          Show Results
+        </Button>
       </div>
 
       <Modal
@@ -139,8 +185,8 @@ const A11yFrontend = () => {
         onOk={handleOk}
         onCancel={handleCancel}
         style={{width: 700}}
-        okText={'搞定'}
-        cancelText={'关闭'}
+        okText='搞定'
+        cancelText='关闭'
       >
         <Input
           addonBefore="用户名*"
@@ -227,6 +273,35 @@ const A11yFrontend = () => {
           </CheckboxGroup>
         </CheckboxGroup>
       </Modal>
+
+      <div className="results_container">
+        <List
+          header={<h2>Issues {apk}</h2>}
+          dataSource={getData(page)}
+          bordered
+          className='issue-list'
+          style={{ border: '1px solid var(--semi-color-border)', flexBasis: '100%', flexShrink: 0 }}
+          renderItem={item => (
+            <List.Item
+              className='issue-list-item'
+              header={<Avatar color='red'>{item.UnderOrOver[0]}</Avatar>}
+              main={
+                // 这里修改具体每个列表的样式
+                <div>
+                  <p>{item.Message}</p>
+                  <p>{item.XPath}</p>
+                  <p>{item.Location}</p>
+                </div>
+              }
+            />
+          )}
+        />
+        <Pagination size='small' style={{ width: '100%', flexBasis: '100%', justifyContent: 'center' }}
+                    pageSize={pageSize} total={issues.length} currentPage={page}
+                    onChange={cPage => onPageChange(cPage)}
+        />
+      </div>
+
     </div>
   );
 }
