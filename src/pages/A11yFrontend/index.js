@@ -18,22 +18,22 @@ import {config} from "../../utils";
 
 const A11yFrontend = () => {
   // 配置对话框是否开启
-  const [visible, setVisible] = useState(false);
+  const [showConfig, setShowConfig] = useState(false);
 
   /**
    * 打开配置对话框
    * */
-  const show_dialog = () => {
-    setVisible(true);
+  const show_config_dialog = () => {
+    setShowConfig(true);
   };
   /**
    * 配置修改完成，关闭配置对话框
    * */
   const handleOk = () => {
-    setVisible(false);
+    setShowConfig(false);
   };
   const handleCancel = () => {
-    setVisible(false);
+    setShowConfig(false);
   }
 
   // 配置选项
@@ -48,8 +48,9 @@ const A11yFrontend = () => {
   const [misuseIssue, setMisuseIssue] = useState(true);
 
   // 结果数据
-  const [apk, setApk] = useState("");
-  const [issues, setIssues] = useState([]);
+  const [apk, setApk] = useState("");  // 远程目录上的 apk 路径
+  const [issues, setIssues] = useState([]);  // issues
+  const [hideResult, setHideResult] = useState(true);  // 是否展示结果框
 
   /**
    * 开始分析
@@ -78,6 +79,9 @@ const A11yFrontend = () => {
     })
   };
 
+  /**
+   * 获取分析结果
+   * */
   const show_results = (e) => {
     e.preventDefault();
     if (username === '') {
@@ -97,6 +101,7 @@ const A11yFrontend = () => {
     }).catch(err => {
       Toast.warning(err);
     });
+    setHideResult(false);
   }
 
   const upload_apk = ({ file, onError, onSuccess }) => {
@@ -120,11 +125,12 @@ const A11yFrontend = () => {
       })
   };
 
-  const [page, onPageChange] = useState(1);
-  const pageSize = 5;
-  const getData = (page) => {
-    let start = (page - 1) * pageSize;
-    let end = page * pageSize;
+  // issue 列表分页展示
+  const [issuePage, onIssuePageChange] = useState(1);
+  const issuePageSize = 5;
+  const getIssuePage = (page) => {
+    let start = (page - 1) * issuePageSize;
+    let end = page * issuePageSize;
     return issues.slice(start, end);
   };
 
@@ -168,7 +174,7 @@ const A11yFrontend = () => {
       </div>
 
       <div className="a11y-btn">
-        <Button size="large" icon={<IconFile />} onClick={show_dialog}>
+        <Button size="large" icon={<IconFile />} onClick={show_config_dialog}>
           Configuration
         </Button>
         <Button size="large" icon={<IconBolt />} onClick={start_analysis}>
@@ -181,7 +187,7 @@ const A11yFrontend = () => {
 
       <Modal
         title="XFinder 配置选项"
-        visible={visible}
+        visible={showConfig}
         onOk={handleOk}
         onCancel={handleCancel}
         style={{width: 700}}
@@ -189,11 +195,11 @@ const A11yFrontend = () => {
         cancelText='关闭'
       >
         <Input
-          addonBefore="用户名*"
+          addonBefore="用户名"
           showClear size="large" maxLength="20"
-          value={username} onChange={(value, e) => {
-          setUsername(value);
-        }}/>
+          value={username} onChange={(value, e) => {setUsername(value);}}
+          autofocus="true"
+        />
         <CheckboxGroup direction="vertical">
           <CheckboxGroup direction="horizontal">
             <Checkbox
@@ -274,34 +280,61 @@ const A11yFrontend = () => {
         </CheckboxGroup>
       </Modal>
 
-      <div className="results_container">
+      <div hidden={hideResult} className="results_container">
         <List
-          header={<h2>Issues {apk}</h2>}
-          dataSource={getData(page)}
+          header={<h2>Issues in {apk}</h2>}
+          dataSource={getIssuePage(issuePage)}
           bordered
           className='issue-list'
           style={{ border: '1px solid var(--semi-color-border)', flexBasis: '100%', flexShrink: 0 }}
           renderItem={item => (
             <List.Item
               className='issue-list-item'
-              header={<Avatar color='red'>{item.UnderOrOver[0]}</Avatar>}
+              header={<Avatar color={item.UnderOrOver[0] === "U" ? 'red' : 'light-blue'}>{item.UnderOrOver[0]}</Avatar>}
               main={
                 // 这里修改具体每个列表的样式
                 <div>
-                  <p>{item.Message}</p>
-                  <p>{item.XPath}</p>
-                  <p>{item.Location}</p>
+                  <span
+                    style={{
+                      color: 'var(--semi-color-text-0)',
+                      fontWeight: 500,
+                      fontSize: '19px'
+                  }}>
+                    {item.Message}
+                  </span>
+                  <p
+                    style={{
+                      color: 'var(--semi-color-text-1)',
+                      margin: '4px 0',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      fontSize: '16px'
+                    }}>
+                    {item.Location}
+                  </p>
+                  <p
+                    style={{
+                      color: 'var(--semi-color-text-1)',
+                      margin: '4px 0',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      fontSize: '16px'
+                    }}>
+                    {item.XPath}
+                  </p>
                 </div>
               }
             />
           )}
         />
-        <Pagination size='small' style={{ width: '100%', flexBasis: '100%', justifyContent: 'center' }}
-                    pageSize={pageSize} total={issues.length} currentPage={page}
-                    onChange={cPage => onPageChange(cPage)}
+        <Pagination
+          size='large' style={{ width: '100%', flexBasis: '100%', justifyContent: 'center', margin: '6px 0' }}
+          pageSize={issuePageSize} total={issues.length} currentPage={issuePage}
+          onChange={cPage => onIssuePageChange(cPage)}
         />
       </div>
-
     </div>
   );
 }

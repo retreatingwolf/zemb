@@ -12,7 +12,9 @@ import 'reveal.js/dist/reveal.css';
 import App from './App';
 import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom'
 import { history } from './utils'
+import { initVChartSemiTheme } from '@visactor/vchart-semi-theme';
 
+initVChartSemiTheme();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
