@@ -3,6 +3,7 @@ import {Button} from "@douyinfe/semi-ui";
 import {IconCode, IconFolderOpen, IconHome, IconSort} from "@douyinfe/semi-icons";
 import React from "react";
 import "./index.scss"
+import {config} from "../../utils";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ const Home = () => {
 
       {/*底部信息栏目*/}
       <div className="footer-container">
-        <span>Last Update: 2024-03-28</span>
+        <span>Last Update: {config.updateTime}</span>
         <a className="beian-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer"> 苏ICP备2023026750号</a>
       </div>
     </div>

@@ -23,7 +23,6 @@ const Blog = () => {
 
         {/*内容部分*/}
         <div className="contents">
-
           <div className="note-container">
             <Button icon={<IconHome/>} size="large" onClick={() => {navigate('/');}}>
               个人简历

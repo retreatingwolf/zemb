@@ -13,7 +13,7 @@
     background: linear-gradient(to right, rgba(var(--semi-light-blue-7), 1), rgba(var(--semi-light-blue-5), 1), rgba(var(--semi-blue-2), 1), rgba(var(--semi-light-blue-1), 1));
     box-shadow: 0 0 5px 1px #999;
 
-    z-index: 1;
+    z-index: 10;  // semi-ui 的表格可能会盖过导航栏，这里设置稍微大点即可暂时解决
     display: flex;
     flex-direction: row;
     justify-content: space-between;
