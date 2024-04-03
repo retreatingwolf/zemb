@@ -25,23 +25,6 @@
     // 上传框
     .a11y-upload {
       margin: 50px;
-
-      // 拖拽上传框效果
-      .components-upload-demo-drag-area {
-        border-radius: var(--semi-border-radius-small);
-        border: 2px dashed var(--semi-color-border);
-        width: 100%;
-        padding: 40px 0 40px 0;
-        background-color: var(--semi-color-tertiary-light-default);
-        display: flex;
-        cursor: pointer;
-        flex-wrap: wrap;
-        justify-content: center;
-        &:hover {
-          background-color: var(--semi-color-primary-light-default);
-          border-color: var(--semi-color-primary);
-        }
-      }
     }
 
     .a11y-btn {
